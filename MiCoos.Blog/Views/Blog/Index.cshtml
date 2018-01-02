@@ -84,7 +84,7 @@
             margin-bottom: 7px
         }
         /*fdsfdsfds*/
-     
+
         /*fdfdsfsdf*/
     </style>
 </head>
@@ -203,6 +203,44 @@
                         <hr />
                     }
 
+                    <div class="row">
+                        <div class="col-md-12" style="text-align:center;margin-bottom:20px;">
+                            <div class="btn-group" role="group" aria-label="..." style="margin-left:10px;">
+                                <div class="dropup">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        15 条/页
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:50px;">
+                                        <li><a href="#">80 条/页</a></li>
+                                        <li><a href="#">50 条/页</a></li>
+                                        <li><a href="#">30 条/页</a></li>
+                                        <li><a href="#">15 条/页</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="btn-group" role="group" aria-label="..." style="margin-left:10px;">
+                                <button type="button" class="btn btn-default">上一页</button>
+                                <button type="button" class="btn btn-default">1</button>
+                                <button type="button" class="btn btn-default" disabled="disabled">...</button>
+                                <button type="button" class="btn btn-default">6</button>
+                                <button type="button" class="btn btn-warning">7</button>
+                                <button type="button" class="btn btn-default">8</button>
+                                <button type="button" class="btn btn-default">9</button>
+                                <button type="button" class="btn btn-default">10</button>
+                                <button type="button" class="btn btn-default" disabled="disabled">...</button>
+                                <button type="button" class="btn btn-default">100</button>
+                                <button type="button" class="btn btn-default">下一页</button>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="..." style="margin-left:10px;">
+                                <button class="btn btn-info" type="button">跳到</button>
+                                <input class="form-control" type="text" style="padding:0px;width:50px;text-align:center;" placeholder="page" />
+                            </div>
+
+
+                        </div>
+                    </div>
 
 
 
@@ -211,19 +249,9 @@
 
 
                 <div class="col-lg-3  col-md-3 col-sm-12">
-                    <div class="well">
-                        <div class="profile-userpic">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="profile-usertitle">
-                            <div class="profile-usertitle-name"> Marcus Doe </div>
-                            <div class="profile-usertitle-job"> Developer </div>
-                        </div>
-                        <div class="profile-userbuttons">
-                            <button type="button" class="btn btn-info  btn-sm">Follow</button>
-                            <button type="button" class="btn btn-info  btn-sm">Message</button>
-                        </div>
-                    </div>
+
+
+
 
                     <div class="well">
 
@@ -236,24 +264,47 @@
                             </cite>
                         </small>
                         <p style=" text-align: center;">
-                            <i class="glyphicon glyphicon-gift"></i> 3 年2 月
+                            <i class="glyphicon glyphicon-gift">3 年2 月</i>
                             <br />
                             <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.example.com</a>
                             <br />
-                            <a href="#" title="我的粉丝（当前用户未关注）"><i class="glyphicon glyphicon-heart-empty" style="color: rgb(212, 106, 64);"></i>20K</a>
+                            <a href="#" title="我的粉丝（当前用户未关注）"><i class="glyphicon glyphicon-heart" style="color: rgb(212, 106, 64);"></i>20K</a>
                             &nbsp;<span style="color:cornflowerblue">|</span>&nbsp;
                             <a href="#" title="我的关注"><i class="glyphicon glyphicon-user" style="color:cadetblue;"></i>20.3K</a>
                             &nbsp;<span style="color:cornflowerblue">|</span>&nbsp;
                             <a href="#" title="我的文章"><i class="glyphicon glyphicon-book" style="color:burlywood;"></i>8.99K</a>
+
                         </p>
                         <div class="profile-userbuttons" style="text-align: center;">
-                            <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>关注我</button>
-                            <button type="button" class="btn btn-info "><span class="glyphicon glyphicon-star" aria-hidden="true">联系我</span></button>
+                            @*<div class="btn-group" role="group" aria-label="...">*@
+                            <button type="button" class="btn btn-info"><i class="glyphicon glyphicon-heart" style="margin-bottom:0px;"></i>关注我</button>
+                            <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-envelope" style="margin-bottom:0px;"></span>联系我</button>
+                            @*</div>*@
+
                         </div>
                     </div>
 
 
-
+                    @* “我的标签”开始 *@
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <span class="glyphicon glyphicon-paperclip text-info"></span>
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <span class="userinfo-name">我的分类</span>
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Articles</a><span class="badge">1242</span></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">News</a><span class="badge">0</span></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Newsletters</a><span class="badge">42</span></li>
+                                    <li class="list-group-item"> <span class="glyphicon glyphicon-file text-info"></span><a href="#">Comments</a><span class="badge">42</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    @* “我的标签”结束 *@
 
                     <div class="well">
                         <h2>Subscription Box</h2>
@@ -281,6 +332,7 @@
                         <a class="list-group-item" href="#"> <h4 class="list-group-item-heading">List group item heading</h4> <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>
                         <a class="list-group-item" href="#"> <h4 class="list-group-item-heading">List group item heading</h4> <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> </a>
                     </div>
+
                     <div class="well">
                         <div class="media"> <div class="media-left"> <a href="#"> <img data-src="holder.js/64x64" class="media-object" alt="64x64" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTY5MjIxZTM1NSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NjkyMjFlMzU1Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
                         <div class="media"> <div class="media-left"> <a href="#"> <img data-src="holder.js/64x64" class="media-object" alt="64x64" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTY5MjIxZTM1NSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NjkyMjFlMzU1Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
@@ -292,6 +344,30 @@
         </div> <!-- /container -->
     </section>
     <section class="footer-link"><a href="http://bootsnipp.com/grafreez" target="_blank">View Our All Snnips</a></section>
+    <script src="../Content/jquery/jquery-3.2.1.js"></script>
+    <script src="../Content/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
 
+            $('.star').on('click', function () {
+                $(this).toggleClass('star-checked');
+            });
+
+            $('.ckbox label').on('click', function () {
+                $(this).parents('tr').toggleClass('selected');
+            });
+
+            $('.btn-filter').on('click', function () {
+                var $target = $(this).data('target');
+                if ($target != 'all') {
+                    $('.table tr').css('display', 'none');
+                    $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+                } else {
+                    $('.table tr').css('display', 'none').fadeIn('slow');
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>
