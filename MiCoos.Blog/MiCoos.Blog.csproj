@@ -149,6 +149,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\image\articleimg.jpg" />
+    <Content Include="Content\image\articleimg02.jpg" />
+    <Content Include="Content\image\articleimg03.jpg" />
     <Content Include="Content\image\backimg.jpeg" />
     <Content Include="Content\image\userphoto.png" />
     <Content Include="favicon.ico" />
