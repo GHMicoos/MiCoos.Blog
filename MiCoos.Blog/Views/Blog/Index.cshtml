@@ -10,247 +10,13 @@
     <meta name="viewport" content="width=device-width" />
     <title>Blog</title>
     <link rel="stylesheet" href="~/Content/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-    <style type="text/css">
-        .navbar {
-            margin-bottom: 0;
-        }
-
-        section {
-            width: 100%;
-            float: left;
-        }
-
-        .banner-section {
-            background-image: url("../Content/image/backimg.jpeg");
-            background-size: cover;
-            height: 380px;
-            left: 0;
-            position: absolute;
-            top: 0;
-            background-position: 0;
-        }
-
-        .post-title-block {
-            padding: 100px 0;
-        }
-
-            .post-title-block h1 {
-                color: #fff;
-                font-size: 100px;
-                font-weight: bold;
-                text-transform: capitalize;
-            }
-
-            .post-title-block li {
-                font-size: 20px;
-                color: #fff;
-            }
-
-        .image-block {
-            float: left;
-            width: 100%;
-            margin-bottom: 0px;
-        }
-
-        .footer-link {
-            float: left;
-            width: 100%;
-            background: #222222;
-            text-align: center;
-            padding: 30px;
-        }
-
-            .footer-link a {
-                color: #A9FD00;
-                font-size: 18px;
-                text-transform: uppercase;
-            }
-
-        .glyphicon {
-            margin-bottom: 10px;
-            margin-right: 10px;
-        }
-
-        small {
-            display: block;
-            line-height: 1.428571429;
-            color: #999;
-        }
-
-        .userinfo-name {
-            color: #5a7391;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 7px
-        }
-
-
-
-        /*fdsfdsfds*/
-        .tags a {
-            border: 1.5px solid #DDD;
-            display: inline-block;
-            color: #717171;
-            background: #FFF;
-            transition: all .1s ease-in-out;
-            border-radius: 8px;
-            margin: 0 2px 6px 0;
-            padding: 5px 8px;
-            text-decoration: none;
-        }
-
-        .tag-a-span {
-            margin-left: 2px;
-            background-color: #5bc0de;
-            padding: 4px 7px 3px 5px;
-        }
-
-        .color-primary {
-            background-color: #337ab7;
-        }
-
-        .color-success {
-            background-color: #398439;
-        }
-
-        .color-info {
-            background-color: #5bc0de;
-        }
-
-        .color-warning {
-            background-color: #d58512;
-        }
-
-        .color-danger {
-            background-color: #ac2925;
-        }
-
-        /*fdfdsfsdf*/
-
-        /* Tabs panel */
-        .tabbable-panel {
-            border: 1px solid #eee;
-            padding: 10px;
-        }
-
-        /* Default mode */
-        .tabbable-line > .nav-tabs {
-            border: none;
-            margin: 0px;
-        }
-
-            .tabbable-line > .nav-tabs > li {
-                margin-right: 2px;
-            }
-
-                .tabbable-line > .nav-tabs > li > a {
-                    border: 0;
-                    margin-right: 0;
-                    color: #737373;
-                }
-
-                    .tabbable-line > .nav-tabs > li > a > i {
-                        color: #a6a6a6;
-                    }
-
-                .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-                    border-bottom: 4px solid #fbcdcf;
-                }
-
-                    .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
-                        border: 0;
-                        background: none !important;
-                        color: #333333;
-                    }
-
-                        .tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
-                            color: #a6a6a6;
-                        }
-
-                    .tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-                        margin-top: 0px;
-                    }
-
-                .tabbable-line > .nav-tabs > li.active {
-                    border-bottom: 4px solid #f3565d;
-                    position: relative;
-                }
-
-                    .tabbable-line > .nav-tabs > li.active > a {
-                        border: 0;
-                        color: #333333;
-                    }
-
-                        .tabbable-line > .nav-tabs > li.active > a > i {
-                            color: #404040;
-                        }
-
-        .tabbable-line > .tab-content {
-            margin-top: -3px;
-            background-color: #fff;
-            border: 0;
-            border-top: 1px solid #eee;
-            padding: 15px 0;
-        }
-
-        .portlet .tabbable-line > .tab-content {
-            padding-bottom: 0;
-        }
-
-        /* Below tabs mode */
-
-        .tabbable-line.tabs-below > .nav-tabs > li {
-            border-top: 4px solid transparent;
-        }
-
-            .tabbable-line.tabs-below > .nav-tabs > li > a {
-                margin-top: 0;
-            }
-
-            .tabbable-line.tabs-below > .nav-tabs > li:hover {
-                border-bottom: 0;
-                border-top: 4px solid #fbcdcf;
-            }
-
-            .tabbable-line.tabs-below > .nav-tabs > li.active {
-                margin-bottom: -2px;
-                border-bottom: 0;
-                border-top: 4px solid #f3565d;
-            }
-
-        .tabbable-line.tabs-below > .tab-content {
-            margin-top: -10px;
-            border-top: 0;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-        }
-
-        .MultiCarousel {
-            float: left;
-            overflow: hidden;
-            padding: 15px;
-            width: 100%;
-            position: relative;
-        }
-
-
-/*4545645646*/
-        #articlerank .media:hover {
-            /*background-color: #d4d4d4;*/
-            color: #5bc0de;
-            font-style: italic;
-            border-left: 3px solid #5bc0de;
-            /*#f3565d;*/
-            padding-left: 3px;
-        }
-        #articlerank .media img {
-            border-radius:6px;
-        }
-    </style>
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/linearicons/style.css" />
+    <link rel="stylesheet" href="~/Content/css/mian.css" />
 </head>
 <body>
-    <!-- Static navbar -->
-    <nav class="navbar navbar-inverse  navbar-static-top">
+    @*导航栏开始*@
+    <nav class="navbar navbar-inverse  navbar-static-top navbarclass">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -259,35 +25,98 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Blog Name</a>
+                <a class="navbar-brand" href="#" style="font-weight:bold;font-size:24px;margin-right:10px;">丢小七的博客</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav navbar-nav navclass">
+                    <li class="active"><a href="#">我的主页</a></li>
+                    <li><a href="#about">统计</a></li>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#contact">联系</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @*<li><a href="../navbar/">Default</a></li>
+                        <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+                        <li><a href="../navbar-fixed-top/">Fixed top</a></li>*@
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle navrightclass" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="glyphicon glyphicon-cog navicon"></span> @*<span class="caret"></span>*@
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">文章</a></li>
+                            <li><a href="#">评论</a></li>
                             <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
+                            <li class="dropdown-header">博客展示设置</li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">个人信息设置</a></li>
                             <li><a href="#">Separated link</a></li>
                             <li><a href="#">One more separated link</a></li>
                         </ul>
                     </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../navbar/">Default</a></li>
-                    <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-                    <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navrightclass" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="glyphicon glyphicon-envelope navicon"></span> <span class="badge" style="margin-top: -25px;background-color:#f3565d;    margin-right: -9px;">100</span>
+                        </a>
+                        <ul class="dropdown-menu notifications">
+                            <li class="header">
+                                <strong>You have 7 new notifications</strong>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-flag text-danger"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline">
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-comment text-info"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline" >
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-flag text-success"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline">
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
+    @*导航栏结束*@
+
     <section class="banner-section"></section>
+
+
     <section class="post-content-section">
         <div class="container">
             <div class="row">
@@ -405,16 +234,13 @@
 
 
                 </div>
-                <!--下面是评论-->
+
+
 
 
                 <div class="col-lg-3  col-md-3 col-sm-12">
-
-
-
-
+                    @* 头像 *@
                     <div class="well">
-
                         <img style="margin-bottom:20px;" src="../Content/image/userphoto.png" class=" center-block img-circle" />
                         <div class="userinfo-name" style=" text-align: center;">About Author</div>
                         <small style=" text-align: center;">
@@ -443,10 +269,10 @@
 
                         </div>
                     </div>
-
+                    @* 头像结束 *@
 
                     @* “我的分类”开始 *@
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel-group " id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <span class="glyphicon glyphicon-paperclip text-info"></span>
@@ -456,7 +282,11 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                 <ul class="list-group">
-                                    <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Articles</a><span class="badge color-info ">1242</span></li>
+                                    <li class="list-group-item">
+                                        <span class="glyphicon glyphicon-file text-info"></span>
+                                        <a href="#">Articles</a>
+                                        <span class="badge color-info ">1242</span>
+                                    </li>
                                     <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">News</a><span class="badge color-info ">0</span></li>
                                     <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Newsletters</a><span class="badge color-info ">42</span></li>
                                     <li class="list-group-item"> <span class="glyphicon glyphicon-file text-info"></span><a href="#">Comments</a><span class="badge color-danger">42</span></li>
@@ -479,18 +309,6 @@
                             <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                                 @* https://bootsnipp.com/snippets/xAKG *@
                                 <div class="tags" style="padding:13px 13px;">
-                                    @*<a href="#" class="success">CSS</a>
-                                        <a href="#" class="primary">Java Script</a>
-                                        <a href="#" class="info">jQuery</a>
-                                        <a href="#" class="danger">HTML5</a>
-                                        <a href="#" class="warning">CSS3</a>
-                                        <a href="#" class="success">DEMO</a>
-                                        <a href="#" class="danger">MVC4</a>
-                                        <a href="#" class="info">ASP.Net</a>
-                                        <a href="#" class="primary">C#</a>
-                                        <a href="#" class="warning">WPF</a>
-                                        <a href="#" class="primary">linq</a>
-                                        <a href="#" class="success">Bootstrap</a>*@
                                     <a href="#" class="success">js <span class="badge tag-a-span color-info ">4</span></a>
                                     <a href="#" class="success">js <span class="badge tag-a-span color-info ">12</span></a>
                                     <a href="#" class="success">C# <span class="badge tag-a-span color-info ">54</span></a>
@@ -564,19 +382,20 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_default_1">
 
-                                    <div class="media"> 
-                                    <div class="media-left">
-                                        <a href="#"> 
-                                        <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;"  data-holder-rendered="true"> 
-                                            </a> 
-                                        </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.
-                                                        </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;" data-holder-rendered="true">
+                                            </a>
+                                        </div> <div class="media-body">
+                                            <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.
+                                        </div>
                                     </div>
-                                    <div class="media"> <div class="media-left"> <a href="#"> <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;"  data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
-                                    <div class="media"> <div class="media-left"> <a href="#"> <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;"  data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
+                                    <div class="media"> <div class="media-left"> <a href="#"> <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
+                                    <div class="media"> <div class="media-left"> <a href="#"> <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
 
-                                    <div class="media"> <div class="media-left"> <a href="#"> <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;"  data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
-                                    <div class="media"> <div class="media-left"> <a href="#"> <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;"  data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
+                                    <div class="media"> <div class="media-left"> <a href="#"> <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
+                                    <div class="media"> <div class="media-left"> <a href="#"> <img src="../Content/image/articleimg.jpg" class="media-object" alt="64x64" style="width: 64px; height: 64px;" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
 
 
                                 </div>
@@ -630,16 +449,21 @@
                     </div>
 
                     <div class="well">
-                        <div class="media"> <div class="media-left"> <a href="#"> <img data-src="holder.js/64x64" class="media-object" alt="64x64" style="width: 64px; height: 64px;"  data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
-                        <div class="media"> <div class="media-left"> <a href="#"> <img data-src="holder.js/64x64" class="media-object" alt="64x64" style="width: 64px; height: 64px;"  data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
-                        <div class="media"> <div class="media-left"> <a href="#"> <img data-src="holder.js/64x64" class="media-object" alt="64x64" style="width: 64px; height: 64px;"  data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
+                        <div class="media"> <div class="media-left"> <a href="#"> <img data-src="holder.js/64x64" class="media-object" alt="64x64" style="width: 64px; height: 64px;" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
+                        <div class="media"> <div class="media-left"> <a href="#"> <img data-src="holder.js/64x64" class="media-object" alt="64x64" style="width: 64px; height: 64px;" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
+                        <div class="media"> <div class="media-left"> <a href="#"> <img data-src="holder.js/64x64" class="media-object" alt="64x64" style="width: 64px; height: 64px;" data-holder-rendered="true"> </a> </div> <div class="media-body"> <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla.</div> </div>
                     </div>
                 </div>
             </div>
 
         </div> <!-- /container -->
     </section>
-    <section class="footer-link"><a href="http://bootsnipp.com/grafreez" target="_blank">View Our All Snnips</a></section>
+    <section class="footer-link">
+        <a href="http://bootsnipp.com/grafreez" target="_blank">By micoos</a>
+
+
+    </section>
+
     <script src="../Content/jquery/jquery-3.2.1.js"></script>
     <script src="../Content/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <script type="text/javascript">
@@ -664,7 +488,7 @@
             });
 
         });
-       
+
     </script>
 </body>
 </html>
