@@ -135,9 +135,10 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-9 col-md-12 col-sm-12" style="padding-bottom:0px;">
-                    <div class="input-group input-group-lg col-4">
-                        <span class="input-group-addon" id="basic-addon1" style="font-weight:bold;">标题</span>
+                    <div class="input-group input-group-lg col-4" style="padding-bottom:20px;">
+                        <span class="input-group-addon" id="basic-addon1" style="font-weight:bold;">文章标题</span>
                         <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" style="font-weight:bold;">
 
                     </div>
@@ -146,7 +147,7 @@
 
                     </div>
                 </div>
-                <div class=" col-lg-9 col-lg-offset-3 col-md-12 col-sm-12" style="padding-bottom:10px;">
+                <div class=" col-lg-9 col-lg-offset-3 col-md-12 col-sm-12" >
                     <div class="panel panel-default">
                         <div class="panel-heading">选择分类</div>
                         <div class="panel-body" style="display:inline-block">
@@ -172,6 +173,65 @@
                         </div>
                     </div>
                 </div>
+                <div class=" col-lg-9 col-lg-offset-3 col-md-12 col-sm-12" style="padding-bottom:10px;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">选择标签</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-xs-8" style="margin-bottom:20px;">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search for...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default addlabelbtn" labelpanel="checklabelpaenl" type="button">添加标签</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                @*<div class="col-lg-12">
+                                        <button class="btn btn-info" onclick="info('Your info is saved properly.')">Info</button>
+                                        <button class="btn btn-warning" onclick="warning('Are you sure ?')">Warning</button>
+                                        <button class="btn btn-danger" onclick="error('Unknown error occurred.')">Error</button>
+                                        <button class="btn btn-success" onclick="success('All Saved.')">Success</button>
+                                    </div>*@
+                            </div>
+                            <div id="checklabelpaenl" style="display:inline-block">
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-lg-offset-3 col-md-12 col-sm-12" style="margin-bottom:20px;margin-top:20px;text-align:center;">
+                    <!-- Contextual button for informational alert messages -->
+                    <button type="button" class="btn btn-danger " style="margin-left:20px;margin-right:20px;">取 消</button>
+
+                    <!-- Indicates caution should be taken with this action -->
+                    <button type="button" class="btn btn-info " style="margin-left:20px;margin-right:20px;">存草稿</button>
+
+                    <!-- Indicates a dangerous or potentially negative action -->
+                    <button type="button" class="btn btn-success " style="margin-left:20px;margin-right:20px;">发 布</button>
+                </div>
+               
             </div>
 
         </div> <!-- /container -->
@@ -183,6 +243,80 @@
 
     <script src="../Content/assets/vendor/summernote/summernote.min.js"></script>
     <script>
+        window.error = function (msg) {
+            var dom = '<div class="top-alert"><div class="alert alert-danger alert-dismissible fade in " role="alert"><i class="glyphicon glyphicon-exclamation-sign"></i> ' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div></div>';
+            var jdom = $(dom);
+            try {
+                var top = $('.top-alert:last').css('top').replace('px', '');
+                var topint = parseInt(top) + 50;
+                jdom.css('top', topint.toString() + 'px');
+            }
+            catch (e) { }
+            jdom.hide();
+            $("body").append(jdom);
+            jdom.fadeIn();
+            setTimeout(function () {
+                jdom.fadeOut(function () {
+                    jdom.remove();
+                });
+            }, 6000);
+        }
+        window.warning = function (msg) {
+            var dom = '<div class="top-alert"><div class="alert alert-warning alert-dismissible fade in " role="alert"><i class="glyphicon glyphicon-question-sign"></i> ' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div></div>';
+            var jdom = $(dom);
+            try {
+                var top = $('.top-alert:last').css('top').replace('px', '');
+                var topint = parseInt(top) + 50;
+                jdom.css('top', topint.toString() + 'px');
+            }
+            catch (e) { }
+            jdom.hide();
+            $("body").append(jdom);
+            jdom.fadeIn();
+            setTimeout(function () {
+                jdom.fadeOut(function () {
+                    jdom.remove();
+                });
+            }, 6000);
+        }
+        window.info = function (msg) {
+            var dom = '<div class="top-alert"><div class="alert alert-info alert-dismissible fade in " role="alert"><i class="glyphicon glyphicon-info-sign"></i> ' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div></div>';
+            var jdom = $(dom);
+            try {
+                var top = $('.top-alert:last').css('top').replace('px', '');
+                var topint = parseInt(top) + 50;
+                jdom.css('top', topint.toString() + 'px');
+            }
+            catch (e) { }
+            jdom.hide();
+            $("body").append(jdom);
+            jdom.fadeIn();
+            setTimeout(function () {
+                jdom.fadeOut(function () {
+                    jdom.remove();
+                });
+            }, 6000);
+        }
+        window.success = function (msg) {
+            var dom = '<div class="top-alert"><div class="alert alert-success alert-dismissible fade in " role="alert"><i class="glyphicon glyphicon-ok"></i> ' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div></div>';
+            var jdom = $(dom);
+            try {
+                var top = $('.top-alert:last').css('top').replace('px', '');
+                var topint = parseInt(top) + 50;
+                jdom.css('top', topint.toString() + 'px');
+            }
+            catch (e) { }
+            jdom.hide();
+            $("body").append(jdom);
+            jdom.fadeIn();
+            setTimeout(function () {
+                jdom.fadeOut(function () {
+                    jdom.remove();
+                });
+            }, 6000);
+        }
+
+
         $(function () {
             $('div.mcraido button').click(function () {
                 var parent = $($(this).parent('div.mcraido:first')[0]);
@@ -197,6 +331,51 @@
 
 
             });
+
+            /*选择标签相关*/
+            $('.checklabel').click(function () {
+                $(this).toggleClass('cl-checked');
+            });
+            $('.checklabeldelete').click(function () {
+                $(this).parent('.checklabel:first').parent('div').remove();
+            });
+
+
+            $('.addlabelbtn').click(function () {
+                var newLabelString = $(this).parents('.input-group:first').find('input[type="text"]:first').get(0).value;
+                var panel = $("#" + $(this).attr('labelpanel'));
+                var labels = panel.find('span.checklabel');
+                var has = false;
+                labels.each(function () {
+                    var str = $(this).text();
+                    if (str) {
+                        if (str === newLabelString) {
+                            has = true;
+                            return false;
+                        }
+                    }
+
+                });
+                if (!has && newLabelString) {
+                    var html = [];
+                    html.push('<div style="display:inline-block"><span class="label label-default checklabel">');
+                    html.push(newLabelString);
+                    html.push('<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>');
+                    panel.append(html.join('').toString());
+                    $('.checklabel:last').click(function () {
+                        $(this).toggleClass('cl-checked');
+                    });
+                    $('.checklabeldelete:last').click(function () {
+                        $(this).parent('.checklabel:first').parent('div').remove();
+                    });
+                }
+                else {
+                    warning('标签"' + newLabelString + '"已经存在！')
+                }
+            });
+
+
+
 
             // summernote editor
             $('.summernote').summernote({

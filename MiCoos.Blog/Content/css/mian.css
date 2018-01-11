@@ -334,22 +334,92 @@ ul.notifications li .timestamp {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
+
     .mcraido > .mcraido-button:hover {
         background-color: #fff;
     }
+
 .mcraido > .mcraido-tick > span.glyphicon {
     margin-bottom: 0px;
     margin-right: 0px;
     color: #eee;
 }
+
 .mcraidoactive > .mcraido-tick > span.glyphicon {
     color: #5cb85c;
 }
+
 div.mcraidoactive > .mcraido-tick {
     /*background-color: #5bc0de;*/
     border-color: #5bc0de;
-
 }
+
 div.mcraidoactive > .mcraido-button {
     border-color: #5bc0de;
 }
+
+.checklabel {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 0.5em;
+    line-height: 3;
+    margin-left: 10px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    
+}
+
+    .checklabel:hover {
+        padding:7px 6px;
+        /*border: 1px solid #5bc0de;*/
+        /*color: #5bc0de;*/
+        /*background-color: white;*/
+    }
+
+.checklabeldelete {
+    margin-left: 6px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+    .checklabeldelete:hover {
+        background-color: #f3565d;
+        padding: 1px;
+    }
+
+.cl-checked {
+    background-color: #5cb85c;
+}
+
+
+
+
+.top-alert {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100000;
+    left: 0;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+    .top-alert .alert {
+        width: auto !important;
+        height: 100%;
+        display: inline;
+        position: relative;
+        margin: 0;
+    }
+
+        .top-alert .alert .close {
+            position: absolute;
+            top: 11px;
+            right: 10px;
+            color: inherit;
+        }
