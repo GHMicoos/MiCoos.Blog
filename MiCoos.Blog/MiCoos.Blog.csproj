@@ -143,6 +143,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\UserBackStageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2445,6 +2446,7 @@
     <Content Include="Content\assets\vendor\summernote\lang\summernote-mn-MN" />
     <None Include="packages.config" />
     <Content Include="Views\Blog\Editor.cshtml" />
+    <Content Include="Views\UserBackStage\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
