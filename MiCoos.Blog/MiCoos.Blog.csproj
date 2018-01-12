@@ -2264,6 +2264,10 @@
     <Content Include="Content\image\userphoto.png" />
     <Content Include="Content\linearicons\fonts\Linearicons-Free.svg" />
     <Content Include="Content\linearicons\style.css" />
+    <Content Include="Content\nthtabs\css\nth.tabs.css" />
+    <Content Include="Content\nthtabs\css\nth.tabs.min.css" />
+    <Content Include="Content\nthtabs\js\nth.tabs.js" />
+    <Content Include="Content\nthtabs\js\nth.tabs.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
@@ -2447,6 +2451,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Blog\Editor.cshtml" />
     <Content Include="Views\UserBackStage\Index.cshtml" />
+    <Content Include="Views\UserBackStage\UserInfo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

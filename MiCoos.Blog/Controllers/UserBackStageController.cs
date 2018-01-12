@@ -13,5 +13,10 @@ namespace MiCoos.Blog.Controllers
         {
             return View();
         }
+
+        public ActionResult UserInfo()
+        {
+            return View();
+        }
     }
 }
