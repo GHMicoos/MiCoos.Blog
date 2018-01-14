@@ -423,3 +423,8 @@ div.mcraidoactive > .mcraido-button {
             right: 10px;
             color: inherit;
         }
+
+.nav-tabs > li.active a>span {
+    color:#6290d0;
+}
+

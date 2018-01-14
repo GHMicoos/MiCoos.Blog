@@ -41,6 +41,7 @@
     <!-- ICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="~/Content/assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="~/Content/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/Content/css/mian.css">
 
 </head>
 <body>
@@ -272,11 +273,11 @@
         </div>
         <!-- END LEFT SIDEBAR -->
         <!-- MAIN CONTENT -->
-        <div id="main-content">
+        <div id="main-content" style="">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="nth-tabs" id="editor-tabs"></div><!--使用时只需此标签，class固定,id自定义-->
+                        <div class="nth-tabs" id="editor-tabs" style="margin-top: -37px;margin-left: -16px;width: 101%;"></div><!--使用时只需此标签，class固定,id自定义-->
                     </div>
                 </div>
                 <div class="row" style="margin-top:20px;">
@@ -388,10 +389,12 @@
 
 
              function show() {
+
+
                  var height = $('#testIframe1').contents().find('body').css('height');
                  $('#testIframe1').css('height', (parseInt(height.replace('px', '')) + 100).toString()+'px');
              }
-             setInterval(show, 300);// 注意函数名没有引号和括弧！
+             //setInterval(show, 300);// 注意函数名没有引号和括弧！
             
             });
 
