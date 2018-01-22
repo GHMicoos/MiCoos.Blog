@@ -2257,11 +2257,21 @@
     <Content Include="Content\fontawesome-free-5.0.2\web-fonts-with-css\webfonts\fa-brands-400.svg" />
     <Content Include="Content\fontawesome-free-5.0.2\web-fonts-with-css\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fontawesome-free-5.0.2\web-fonts-with-css\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\iframeResizer\ie8.polyfils.min.js" />
+    <Content Include="Content\iframeResizer\iframeResizer.contentWindow.js" />
+    <Content Include="Content\iframeResizer\iframeResizer.contentWindow.min.js" />
+    <Content Include="Content\iframeResizer\iframeResizer.js" />
+    <Content Include="Content\iframeResizer\iframeResizer.min.js" />
+    <Content Include="Content\iframeResizer\index.js" />
+    <Content Include="Content\iframe\jquery-iframe-auto-height.js" />
+    <Content Include="Content\iframe\jquery-iframe-auto-height.min.js" />
+    <Content Include="Content\iframe\jquery.browser.js" />
     <Content Include="Content\image\articleimg.jpg" />
     <Content Include="Content\image\articleimg02.jpg" />
     <Content Include="Content\image\articleimg03.jpg" />
     <Content Include="Content\image\backimg.jpeg" />
     <Content Include="Content\image\userphoto.png" />
+    <Content Include="Content\js\userbackstage\index.js" />
     <Content Include="Content\linearicons\fonts\Linearicons-Free.svg" />
     <Content Include="Content\linearicons\style.css" />
     <Content Include="Content\nthtabs\css\nth.tabs.css" />
@@ -2448,10 +2458,15 @@
     <Content Include="Content\assets\vendor\summernote\font\summernote.ttf" />
     <Content Include="Content\assets\vendor\summernote\font\summernote.woff" />
     <Content Include="Content\assets\vendor\summernote\lang\summernote-mn-MN" />
+    <Content Include="Content\iframeResizer\ie8.polyfils.map" />
+    <Content Include="Content\iframeResizer\iframeResizer.contentWindow.map" />
+    <Content Include="Content\iframeResizer\iframeResizer.map" />
     <None Include="packages.config" />
     <Content Include="Views\Blog\Editor.cshtml" />
     <Content Include="Views\UserBackStage\Index.cshtml" />
     <Content Include="Views\UserBackStage\UserInfo.cshtml" />
+    <Content Include="Views\UserBackStage\Editor.cshtml" />
+    <Content Include="Views\UserBackStage\Main.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

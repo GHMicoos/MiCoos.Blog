@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="~/Content/assets/vendor/toastr/toastr.min.css">
 
     <link href="https://cdn.bootcss.com/jquery.scrollbar/0.2.11/jquery.scrollbar.min.css" rel="stylesheet">
-    
+
     <link href="~/Content/nthtabs/css/nth.tabs.min.css" rel="stylesheet">
-   
+
 
 
 
@@ -69,6 +69,12 @@
                     <!-- navbar menu -->
                     <div id="navbar-menu">
                         <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                    <i class="lnr lnr-highlight"></i>
+                                    <span class="notification-dot" style="background-color:#22af46;"></span>
+                                </a>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                     <i class="lnr lnr-alarm"></i>
@@ -221,47 +227,31 @@
                 </div>
                 <nav id="left-sidebar-nav" class="sidebar-nav">
                     <ul id="main-menu" class="metismenu">
-                        <li class="active"><a href="index.html"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                        <li class="active"><a href="#" urldata="main"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
                         <li class="">
-                            <a href="#uiElements" class="has-arrow" aria-expanded="false"><i class="lnr lnr-magic-wand"></i> <span>UI Elements</span></a>
+                            <a href="#" urldata="aritclemanage" class="has-arrow" aria-expanded="false"><i class="lnr lnr-magic-wand"></i> <span>文章管理</span></a>
                             <ul aria-expanded="true">
-                                <li class=""><a href="ui-tabs.html">Tabs</a></li>
-                                <li class=""><a href="ui-buttons.html">Buttons</a></li>
-                                <li class=""><a href="ui-bootstrap.html">Bootstrap UI</a></li>
-                                <li class=""><a href="ui-icons.html"><span>Icons</span></a></li>
+                                <li class=""><a href="#" urldata="aritclemanage-all" ><i class="lnr lnr-inbox"></i> <span>全部</span></a></li>
+                                <li class=""><a href="#" urldata="aritclemanage-publish" ><i class="lnr lnr-inbox"></i> <span>已发表</span></a></li>
+                                <li class=""><a href="#" urldata="aritclemanage-drafts" ><i class="lnr lnr-inbox"></i> <span>草稿箱</span></a></li>
+                                <li class=""><a href="#" urldata="aritclemanage-deleted" ><i class="lnr lnr-trash"></i> <span>回收站</span></a></li>
                             </ul>
                         </li>
                         <li class="">
-                            <a href="#subPages" class="has-arrow" aria-expanded="false"><i class="lnr lnr-file-empty"></i> <span>Pages</span></a>
+                            <a href="#"  urldata="comment"  class="has-arrow" aria-expanded="false"><i class="lnr lnr-file-empty"></i> <span>评论管理</span></a>
                             <ul aria-expanded="true">
-                                <li class=""><a href="page-profile.html">User Profile</a></li>
-                                <li class=""><a href="page-login.html">Login</a></li>
-                                <li class=""><a href="page-register.html">Register</a></li>
-                                <li class=""><a href="page-lockscreen.html">Lockscreen</a></li>
-                                <li class=""><a href="page-forgot-password.html">Forgot Password</a></li>
-                                <li class=""><a href="page-404.html">Page 404</a></li>
-                                <li class=""><a href="page-500.html">Page 500</a></li>
+                                <li class=""><a href="#"  urldata="comment-myarticle" >我的文章评论</a></li>
+                                <li class=""><a href="#" urldata="comment-ipublished" >我发表的评论</a></li>
                             </ul>
                         </li>
                         <li class="">
-                            <a href="#forms" class="has-arrow" aria-expanded="false"><i class="lnr lnr-pencil"></i> <span>Forms</span></a>
+                            <a href="#"  urldata="articleclass"  class="has-arrow" aria-expanded="false"><i class="lnr lnr-pencil"></i> <span>类型管理</span></a>
                             <ul aria-expanded="true">
-                                <li class=""><a href="forms-validation.html">Form Validation</a></li>
-                                <li class=""><a href="forms-advanced.html">Advanced Form Elements</a></li>
-                                <li class=""><a href="forms-basic.html">Basic Form Elements</a></li>
-                                <li class=""><a href="forms-dragdropupload.html">Drag &amp; Drop Upload</a></li>
-                                <li class=""><a href="forms-texteditor.html">Text Editor</a></li>
+                                <li class=""><a href="#" urldata="articleclass-type" >文章类别管理</a></li>
+                                <li class=""><a href="#" urldata="articleclass-label" >文章标签管理</a></li>
                             </ul>
                         </li>
-                        <li class="">
-                            <a href="#charts" class="has-arrow" aria-expanded="false"><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a>
-                            <ul aria-expanded="true">
-                                <li class=""><a href="charts-chartist.html">Chartist</a></li>
-                                <li class=""><a href="charts-sparkline.html">Sparkline Chart</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a href="notifications.html"><i class="lnr lnr-alarm"></i> <span>Notifications</span> <span class="badge bg-danger">15</span></a></li>
-                        <li class=""><a href="typography.html"><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
+                        <li class=""><a href="#" urldata="blogsetup" ><i class="lnr lnr-cog"></i> <span>博客设置</span> <span class="badge bg-danger">15</span></a></li>
                     </ul>
                 </nav>
                 <div style="padding: 30px; text-align: center;">
@@ -274,28 +264,30 @@
         <!-- END LEFT SIDEBAR -->
         <!-- MAIN CONTENT -->
         <div id="main-content" style="">
-            <div class="container-fluid">
+            <div class="container-fluid center-block">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="nth-tabs" id="editor-tabs" style="margin-top: -37px;margin-left: -16px;width: 101%;"></div><!--使用时只需此标签，class固定,id自定义-->
+                    <div class="col-md-12" style="background-color:white;">
+                        @*<div id="tabs"  style="margin-top: -37px;margin-left: -16px;width: 101%;"><ul></ul></div>*@
+                        <div class="nth-tabs" id="editor-tabs" style="margin-top: -37px;margin-left: -16px;width: 101%;"></div>
+                        <!--使用时只需此标签，class固定,id自定义-->
                     </div>
                 </div>
-                <div class="row" style="margin-top:20px;">
-                    <div class="col-md-12" style="line-height:50px;">
-                        <button type="button" class="btn btn-primary" onclick="nthTabs.delTab('f')">关闭潘金莲</button>
-                        <button type="button" class="btn btn-primary" onclick="nthTabs.addTab({id:'bgj',title:'白骨精',content:'老白'})">添加白骨精</button>
-                        <button type="button" class="btn btn-primary" onclick="nthTabs.setActTab('e')">切换到武松</button>
-                        <button type="button" class="btn btn-primary" onclick="nthTabs.locationTab()">定位到当前选项卡</button>
-                        <button type="button" class="btn btn-primary" onclick="nthTabs.delOtherTab()">关闭其他</button>
-                        <button type="button" class="btn btn-primary" onclick="nthTabs.delAllTab()">关闭所有</button>
-                        <button type="button" class="btn btn-primary" onclick="$('.roll-nav-left').click()">左滑动</button>
-                        <button type="button" class="btn btn-primary" onclick="$('.roll-nav-right').click()">右滑动</button>
-                        <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getMarginStep())">获取左右滑动步值</button>
-                        <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getActiveId())">获取当前选项卡ID</button>
-                        <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getAllTabWidth())">获取所有选项卡宽度</button>
-                        <button type="button" class="btn btn-primary" onclick="console.log(nthTabs.getTabList());alert(nthTabs.getTabList())">获取所有选项卡</button>
-                    </div>
-                </div>
+                @*<div class="row" style="margin-top:20px;">
+                        <div class="col-md-12" style="line-height:50px;">
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.delTab('f')">关闭潘金莲</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.addTab({id:'bgj',title:'白骨精',content:'老白'})">添加白骨精</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.setActTab('e')">切换到武松</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.locationTab()">定位到当前选项卡</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.delOtherTab()">关闭其他</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.delAllTab()">关闭所有</button>
+                            <button type="button" class="btn btn-primary" onclick="$('.roll-nav-left').click()">左滑动</button>
+                            <button type="button" class="btn btn-primary" onclick="$('.roll-nav-right').click()">右滑动</button>
+                            <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getMarginStep())">获取左右滑动步值</button>
+                            <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getActiveId())">获取当前选项卡ID</button>
+                            <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getAllTabWidth())">获取所有选项卡宽度</button>
+                            <button type="button" class="btn btn-primary" onclick="console.log(nthTabs.getTabList());alert(nthTabs.getTabList())">获取所有选项卡</button>
+                        </div>
+                    </div>*@
             </div>
             <!-- END MAIN CONTENT -->
             <div class="clearfix"></div>
@@ -330,76 +322,53 @@
     <script src="../Content/assets/vendor/toastr/toastr.js"></script>
     <script src="../Content/assets/scripts/common.js"></script>
 
+    <script src="../Content/iframeResizer/iframeResizer.js"></script>
+
     <script src="https://cdn.bootcss.com/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js"></script>
     <script src="../Content/nthtabs/js/nth.tabs.min.js"></script>
+    <script src="~/Content/js/userbackstage/index.js"></script>
 
-        <script>
-          
-         var nthTabs;
-         $(function () {
-             //一个低门槛的演示,更多需求看源码
-             //基于bootstrap tab的自定义多标签的jquery实用插件，滚动条依赖jquery.scrollbar，图标依赖font-awesome
-             nthTabs = $("#editor-tabs").nthTabs();
-             nthTabs.addTab({
-                 id: 'a',
-                 title: '孙悟空',
-                 active: true,
-                 allowClose: false,
-                 content: '<iframe id="testIframe"  frameborder="0"  src="http://www.baidu.com" scrolling="auto" height="100" style="width:100%; "></iframe>',//'<iframe src="http://www.baidu.com"></iframe>',
-             }).addTab({
-                 /*换个姿势*/
-                 id: 'b',
-                 title: '猪八戒-关不掉',
-                 content: '高老庄娶媳妇高老庄娶媳妇高老<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>12123123132',
-                 
-             }).addTab({
-                 id: 'c',
-                 title: '沙和尚',
-                 content: '<iframe id="testIframe1"  frameborder="0"  src="/UserBackStage/UserInfo" scrolling="auto" style="width:100%; "></iframe>',//'<iframe src="/UserBackStage/UserInfo"></iframe>',,
-             }).addTab({
-                 id: 'd',
-                 title: '唐僧',
-                 content: '光头一个',
-             }).addTab({
-                 id: 'e',
-                 title: '武松',
-                 content: '打虎猛汉',
-             }).addTab({
-                 id: 'f',
-                 title: '潘金莲',
-                 content: '求爱爱',
-             }).addTab({
-                 id: 'g',
-                 title: '来个标题长一点的的的来个标题长一点的的的',
-                 content: '你赢了',
-             }).addTab({
-                 id: 'h',
-                 title: '支持连贯操作',
-                 content: '没错就是这么爽',
-             }).addTab({
-                 id: 'i',
-                 title: '欢迎提意见',
-                 content: '一定一定',
-             }).addTab({
-                 id: 'j',
-                 title: '熬夜写的啊',
-                 content: '码农苦逼~',
-             }).setActTab("#a");
+    <script>
+
+       
+
+        
+
+            //iFrameResize({ log :true });
+            //iFrameResize({
+
+            //});
+
+            //$(function () {
+
+            //    function show() {
+
+
+            //        var height = document.getElementById("testIframe").contentWindow.document.documentElement.scrollHeight;
+            //        document.getElementById("testIframe").height = height;
+            //    };
+            //    setInterval(show, 1000);// 注意函数名没有引号和括弧！
+            //});
+            //$(function () {
+            //    function reinitIframe() {
+            //        try {
+
+            //            $.each(document.getElementsByClassName("tab-pane"), function () {
+            //                this[0].innerHeight = window.innerHeight - 200;
+            //            });
 
 
 
-             function show() {
+            //        } catch (ex) { }
+
+            //    };
+            //    setInterval(reinitIframe, 1000);// 注意函数名没有引号和括弧！
+            //});
 
 
-                 var height = $('#testIframe1').contents().find('body').css('height');
-                 $('#testIframe1').css('height', (parseInt(height.replace('px', '')) + 100).toString()+'px');
-             }
-             //setInterval(show, 300);// 注意函数名没有引号和括弧！
-            
-            });
+            //window.setInterval("reinitIframe()", 1000);
 
-           
-           
-        </script>
+
+    </script>
 </body>
 </html>

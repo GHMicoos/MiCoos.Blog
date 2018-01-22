@@ -18,5 +18,15 @@ namespace MiCoos.Blog.Controllers
         {
             return View();
         }
+
+        public ActionResult Editor()
+        {
+            return View();
+        }
+
+        public ActionResult Main()
+        {
+            return View();
+        }
     }
 }
