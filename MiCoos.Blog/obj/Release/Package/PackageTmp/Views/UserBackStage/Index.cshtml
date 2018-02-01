@@ -1,0 +1,374 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="~/Content/bootstrap-3.3.7-dist/css/bootstrap.css" />
+
+    <title>我的博客后台</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="~/Content/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendor/linearicons/style.css">
+    <link rel="stylesheet" href="~/Content/assets/vendor/metisMenu/metisMenu.css">
+    <link rel="stylesheet" href="~/Content/assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendor/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="~/Content/assets/vendor/toastr/toastr.min.css">
+
+    <link href="https://cdn.bootcss.com/jquery.scrollbar/0.2.11/jquery.scrollbar.min.css" rel="stylesheet">
+
+    <link href="~/Content/nthtabs/css/nth.tabs.min.css" rel="stylesheet">
+
+
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="~/Content/assets/css/main.css">
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    <link rel="stylesheet" href="~/Content/assets/css/demo.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/Content/css/mian.css">
+
+</head>
+<body>
+
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu"></i></button>
+                </div>
+                <!-- logo -->
+                <div class="navbar-brand">
+                    <a href="index.html"><img src="~/Content/assets/img/logo.png" alt="DiffDash Logo" class="img-responsive logo"></a>
+                </div>
+                <!-- end logo -->
+                <div class="navbar-right">
+                    <!-- search form -->
+                    <form id="navbar-search" class="navbar-form search-form">
+                        <input value="" class="form-control" placeholder="Search here..." type="text">
+                        <button type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </form>
+                    <!-- end search form -->
+                    <!-- navbar menu -->
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                    <i class="lnr lnr-highlight"></i>
+                                    <span class="notification-dot" style="background-color:#22af46;"></span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                    <i class="lnr lnr-alarm"></i>
+                                    <span class="notification-dot"></span>
+                                </a>
+                                <ul class="dropdown-menu notifications">
+                                    <li class="header"><strong>You have 7 new notifications</strong></li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="fa fa-fw fa-flag-checkered text-muted"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to engage potential customers.</p>
+                                                    <span class="timestamp">24 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="fa fa-fw fa-exclamation-triangle text-warning"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                    <span class="timestamp">2 hours ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="fa fa-fw fa-bar-chart text-muted"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Website visits from Facebook is 27% higher than last week.</p>
+                                                    <span class="timestamp">Yesterday</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="fa fa-fw fa-check-circle text-success"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Your campaign <strong>Holiday Sale</strong> is approved.</p>
+                                                    <span class="timestamp">2 days ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="fa fa-fw fa-exclamation-circle text-danger"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Error on website analytics configurations</p>
+                                                    <span class="timestamp">3 days ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="footer"><a href="#" class="more">See all notifications</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                    <i class="lnr lnr-cog"></i>
+                                </a>
+                                <ul class="dropdown-menu user-menu menu-icon">
+                                    <li class="menu-heading">ACCOUNT SETTINGS</li>
+                                    <li><a href="#"><i class="fa fa-fw fa-edit"></i> <span>Basic</span></a></li>
+                                    <li><a href="#"><i class="fa fa-fw fa-bell"></i> <span>Notifications</span></a></li>
+                                    <li><a href="#"><i class="fa fa-fw fa-sliders"></i> <span>Preferences</span></a></li>
+                                    <li><a href="#"><i class="fa fa-fw fa-lock"></i> <span>Privacy</span></a></li>
+                                    <li class="menu-heading">BILLING</li>
+                                    <li><a href="#"><i class="fa fa-fw fa-file-text-o"></i> <span>Invoices</span></a></li>
+                                    <li><a href="#"><i class="fa fa-fw fa-credit-card"></i> <span>Payments</span></a></li>
+                                    <li><a href="#"><i class="fa fa-fw fa-refresh"></i> <span>Renewals</span></a></li>
+                                    <li class="menu-button">
+                                        <a href="#" class="btn btn-primary"><i class="fa fa-rocket"></i> UPGRADE PLAN</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                    <i class="lnr lnr-question-circle"></i>
+                                </a>
+                                <ul class="dropdown-menu user-menu">
+                                    <li>
+                                        <form class="search-form help-search-form">
+                                            <input value="" class="form-control" placeholder="How can we help?" type="text">
+                                            <button type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                        </form>
+                                    </li>
+                                    <li class="menu-heading">HOW-TO</li>
+                                    <li><a href="#">Setting up Campaign</a></li>
+                                    <li><a href="#">Understanding Website Analytics</a></li>
+                                    <li><a href="#">Boost Your Sales</a></li>
+                                    <li><a href="#">Knowing Your Audience</a></li>
+                                    <li class="menu-heading">ACCOUNT</li>
+                                    <li><a href="#">Change Password</a></li>
+                                    <li><a href="#">Privacy &amp; Security</a></li>
+                                    <li><a href="#">Membership</a></li>
+                                    <li class="menu-heading">BILLING</li>
+                                    <li><a href="#">Setup Payment</a></li>
+                                    <li><a href="#">Auto-Renewal Program</a></li>
+                                    <li><a href="#">Cancellation</a></li>
+                                    <li class="menu-button">
+                                        <a href="#" class="btn btn-primary"><i class="fa fa-question-circle"></i> HELP CENTER</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end navbar menu -->
+                </div>
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+        <!-- LEFT SIDEBAR -->
+        <div id="left-sidebar" class="sidebar">
+            <button type="button" class="btn btn-xs btn-link btn-toggle-fullwidth">
+                <span class="sr-only">Toggle Fullwidth</span>
+                <i class="fa fa-angle-left"></i>
+            </button>
+            <div class="sidebar-scroll">
+                <div class="user-account">
+                    <img src="~/Content/assets/img/user.png" class="img-responsive img-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle user-name" data-toggle="dropdown">Hello, <strong>Austin Hoffman</strong> <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right account">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Messages</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <nav id="left-sidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu">
+                        <li class="active"><a href="#" urldata="main"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                        <li class="">
+                            <a href="#" urldata="aritclemanage" class="has-arrow" aria-expanded="false"><i class="lnr lnr-magic-wand"></i> <span>文章管理</span></a>
+                            <ul aria-expanded="true">
+                                <li class=""><a href="#" urldata="aritclemanage-all" ><i class="lnr lnr-inbox"></i> <span>全部</span></a></li>
+                                <li class=""><a href="#" urldata="aritclemanage-publish" ><i class="lnr lnr-inbox"></i> <span>已发表</span></a></li>
+                                <li class=""><a href="#" urldata="aritclemanage-drafts" ><i class="lnr lnr-inbox"></i> <span>草稿箱</span></a></li>
+                                <li class=""><a href="#" urldata="aritclemanage-deleted" ><i class="lnr lnr-trash"></i> <span>回收站</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#"  urldata="comment"  class="has-arrow" aria-expanded="false"><i class="lnr lnr-file-empty"></i> <span>评论管理</span></a>
+                            <ul aria-expanded="true">
+                                <li class=""><a href="#"  urldata="comment-myarticle" >我的文章评论</a></li>
+                                <li class=""><a href="#" urldata="comment-ipublished" >我发表的评论</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#"  urldata="articleclass"  class="has-arrow" aria-expanded="false"><i class="lnr lnr-pencil"></i> <span>类型管理</span></a>
+                            <ul aria-expanded="true">
+                                <li class=""><a href="#" urldata="articleclass-type" >文章类别管理</a></li>
+                                <li class=""><a href="#" urldata="articleclass-label" >文章标签管理</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="#" urldata="blogsetup" ><i class="lnr lnr-cog"></i> <span>博客设置</span> <span class="badge bg-danger">15</span></a></li>
+                    </ul>
+                </nav>
+                <div style="padding: 30px; text-align: center;">
+                    <h2 style="font-size: 16px; margin-bottom: 15px; font-weight: 700;">Other Similar Template</h2>
+                    <a href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=diffdash&utm_medium=template&utm_campaign=KlorofilPro" target="_blank"><img src="~/Content/assets/img/klorofilpro.png" class="img-responsive thumbnail" alt=""></a>
+                    <a href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=diffdash&utm_medium=template&utm_campaign=KlorofilPro" target="_blank" class="btn btn-primary">VIEW DEMO</a>
+                </div>
+            </div>
+        </div>
+        <!-- END LEFT SIDEBAR -->
+        <!-- MAIN CONTENT -->
+        <div id="main-content" style="">
+            <div class="container-fluid center-block">
+                <div class="row">
+                    <div class="col-md-12" style="background-color:white;">
+                        @*<div id="tabs"  style="margin-top: -37px;margin-left: -16px;width: 101%;"><ul></ul></div>*@
+                        <div class="nth-tabs" id="editor-tabs" style="margin-top: -37px;margin-left: -16px;width: 101%;"></div>
+                        <!--使用时只需此标签，class固定,id自定义-->
+                    </div>
+                </div>
+                @*<div class="row" style="margin-top:20px;">
+                        <div class="col-md-12" style="line-height:50px;">
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.delTab('f')">关闭潘金莲</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.addTab({id:'bgj',title:'白骨精',content:'老白'})">添加白骨精</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.setActTab('e')">切换到武松</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.locationTab()">定位到当前选项卡</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.delOtherTab()">关闭其他</button>
+                            <button type="button" class="btn btn-primary" onclick="nthTabs.delAllTab()">关闭所有</button>
+                            <button type="button" class="btn btn-primary" onclick="$('.roll-nav-left').click()">左滑动</button>
+                            <button type="button" class="btn btn-primary" onclick="$('.roll-nav-right').click()">右滑动</button>
+                            <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getMarginStep())">获取左右滑动步值</button>
+                            <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getActiveId())">获取当前选项卡ID</button>
+                            <button type="button" class="btn btn-primary" onclick="alert(nthTabs.getAllTabWidth())">获取所有选项卡宽度</button>
+                            <button type="button" class="btn btn-primary" onclick="console.log(nthTabs.getTabList());alert(nthTabs.getTabList())">获取所有选项卡</button>
+                        </div>
+                    </div>*@
+            </div>
+            <!-- END MAIN CONTENT -->
+            <div class="clearfix"></div>
+            <footer>
+                <p class="copyright">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    @* 下面是js *@
+    @*<script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>*@
+
+    <script src="../Content/jquery/jquery-3.2.1.js"></script>
+    <script src="../Content/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../Content/assets/vendor/metisMenu/metisMenu.js"></script>
+    <script src="../Content/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    @* jQuery线状图插件Sparkline *@
+    <script src="../Content/assets/vendor/jquery-sparkline/js/jquery.sparkline.min.js"></script>
+    <script src="../Content/assets/vendor/bootstrap-progressbar/js/bootstrap-progressbar.min.js"></script>
+    <script src="../Content/assets/vendor/chartist/js/chartist.min.js"></script>
+    <script src="../Content/assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.min.js"></script>
+    <script src="../Content/assets/vendor/chartist-plugin-axistitle/chartist-plugin-axistitle.min.js"></script>
+    <script src="../Content/assets/vendor/chartist-plugin-legend-latest/chartist-plugin-legend.js"></script>
+    <script src="../Content/assets/vendor/toastr/toastr.js"></script>
+    <script src="../Content/assets/scripts/common.js"></script>
+
+    <script src="../Content/iframeResizer/iframeResizer.js"></script>
+
+    <script src="https://cdn.bootcss.com/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js"></script>
+    <script src="../Content/nthtabs/js/nth.tabs.min.js"></script>
+    <script src="~/Content/js/userbackstage/index.js"></script>
+
+    <script>
+
+       
+
+        
+
+            //iFrameResize({ log :true });
+            //iFrameResize({
+
+            //});
+
+            //$(function () {
+
+            //    function show() {
+
+
+            //        var height = document.getElementById("testIframe").contentWindow.document.documentElement.scrollHeight;
+            //        document.getElementById("testIframe").height = height;
+            //    };
+            //    setInterval(show, 1000);// 注意函数名没有引号和括弧！
+            //});
+            //$(function () {
+            //    function reinitIframe() {
+            //        try {
+
+            //            $.each(document.getElementsByClassName("tab-pane"), function () {
+            //                this[0].innerHeight = window.innerHeight - 200;
+            //            });
+
+
+
+            //        } catch (ex) { }
+
+            //    };
+            //    setInterval(reinitIframe, 1000);// 注意函数名没有引号和括弧！
+            //});
+
+
+            //window.setInterval("reinitIframe()", 1000);
+
+
+    </script>
+</body>
+</html>

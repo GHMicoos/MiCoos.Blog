@@ -370,11 +370,10 @@ div.mcraidoactive > .mcraido-button {
     -ms-user-select: none;
     -khtml-user-select: none;
     user-select: none;
-    
 }
 
     .checklabel:hover {
-        padding:7px 6px;
+        padding: 7px 6px;
         /*border: 1px solid #5bc0de;*/
         /*color: #5bc0de;*/
         /*background-color: white;*/
@@ -424,7 +423,33 @@ div.mcraidoactive > .mcraido-button {
             color: inherit;
         }
 
-.nav-tabs > li.active a>span {
-    color:#6290d0;
+.nav-tabs > li.active a > span {
+    color: #6290d0;
 }
 
+
+/*页面主体-start*/
+
+
+.post-content-section {
+    background-color: #f5f6f7;
+}
+
+    .post-content-section .container {
+        background-color: white;
+        padding-top:30px;
+    }
+
+.articleitem > .row {
+    margin-left: 10px;
+}
+
+.articleitem a.articletitle {
+    text-decoration: none;
+}
+.articleitem a.articletitle:hover {
+    font-style: italic;
+    color: #5bc0de;
+}
+
+/*页面主体-end*/

@@ -8,68 +8,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Blog</title>
-    <link rel="stylesheet" href="~/Content/bootstrap-3.3.7-dist/css/bootstrap.css" />
-    <style type="text/css">
-        .navbar {
-            margin-bottom: 0;
-        }
-
-        section {
-            width: 100%;
-            float: left;
-        }
-
-        .banner-section {
-            background-image: url("../Content/image/backimg.jpeg");
-            background-size: cover;
-            height: 380px;
-            left: 0;
-            position: absolute;
-            top: 0;
-            background-position: 0;
-        }
-
-        .post-title-block {
-            padding: 100px 0;
-        }
-
-            .post-title-block h1 {
-                color: #fff;
-                font-size: 85px;
-                font-weight: bold;
-                text-transform: capitalize;
-            }
-
-            .post-title-block li {
-                font-size: 20px;
-                color: #fff;
-            }
-
-        .image-block {
-            float: left;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .footer-link {
-            float: left;
-            width: 100%;
-            background: #222222;
-            text-align: center;
-            padding: 30px;
-        }
-
-            .footer-link a {
-                color: #A9FD00;
-                font-size: 18px;
-                text-transform: uppercase;
-            }
-    </style>
+    <title>Article</title>
+    <link rel="stylesheet" href="~/Content/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/linearicons/style.css" />
+    <link rel="stylesheet" href="~/Content/css/mian.css" />
 </head>
 <body>
-    <!-- Static navbar -->
-    <nav class="navbar navbar-inverse  navbar-static-top">
+    @*导航栏开始*@
+    <nav class="navbar navbar-inverse  navbar-static-top navbarclass">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -78,47 +25,104 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Blog Name</a>
+                <a class="navbar-brand" href="#" style="font-weight:bold;margin-right:10px;">丢小七的博客</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav navbar-nav navclass">
+                    <li class="active"><a href="#">主页</a></li>
+                    <li><a href="#about">统计</a></li>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#contact">联系</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @*<li><a href="../navbar/">Default</a></li>
+                        <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+                        <li><a href="../navbar-fixed-top/">Fixed top</a></li>*@
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle navrightclass" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="glyphicon glyphicon-cog navicon"></span> @*<span class="caret"></span>*@
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">文章</a></li>
+                            <li><a href="#">评论</a></li>
                             <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
+                            <li class="dropdown-header">博客展示设置</li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">个人信息设置</a></li>
                             <li><a href="#">Separated link</a></li>
                             <li><a href="#">One more separated link</a></li>
                         </ul>
                     </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../navbar/">Default</a></li>
-                    <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-                    <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navrightclass" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="glyphicon glyphicon-envelope navicon"></span> <span class="badge" style="margin-top: -25px;background-color:#f3565d;    margin-right: -9px;">100</span>
+                        </a>
+                        <ul class="dropdown-menu notifications">
+                            <li class="header">
+                                <strong>You have 7 new notifications</strong>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-flag text-danger"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline">
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-comment text-info"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline">
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-flag text-success"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline">
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-    <section class="banner-section"></section>
+    @*导航栏结束*@
+
     <section class="post-content-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 post-title-block">
-
-                    <h1 class="text-center">post Title goes here</h1>
-                    <ul class="list-inline text-center">
-                        <li>Author |</li>
-                        <li>Category |</li>
-                        <li>Date |</li>
-                    </ul>
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <!--文章标题-->
+                    <h1 style="padding: 0 29px;color: #2c3033; font-size: 24px;  font-weight: 700;line-height: 38px;">接入层高性能缓存技术nginx+redis利器</h1>
                 </div>
+
+
                 <div class="col-lg-9 col-md-9 col-sm-12">
                     <p class="lead">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
                     <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -188,7 +192,7 @@
     </section>
     <section class="footer-link"><a href="http://bootsnipp.com/grafreez" target="_blank">View Our All Snnips</a></section>
 
-    <script  src="../Content/jquery/jquery-3.2.1.js"></script>
-    <script  src="../Content/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../Content/jquery/jquery-3.2.1.js"></script>
+    <script src="../Content/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 </body>
 </html>
