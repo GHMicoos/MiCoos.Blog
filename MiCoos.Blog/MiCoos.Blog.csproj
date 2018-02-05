@@ -2272,6 +2272,7 @@
     <Content Include="Content\image\articleimg02.jpg" />
     <Content Include="Content\image\articleimg03.jpg" />
     <Content Include="Content\image\backimg.jpeg" />
+    <Content Include="Content\image\share.gif" />
     <Content Include="Content\image\userphoto.png" />
     <Content Include="Content\js\userbackstage\index.js" />
     <Content Include="Content\linearicons\fonts\Linearicons-Free.svg" />
