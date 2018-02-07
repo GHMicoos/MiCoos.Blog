@@ -92,7 +92,6 @@ D:\LeiLing\5-Project\0-GitHub\MiCoos.Blog\MiCoos.Blog\bin\zh-Hans\System.Web.Raz
 D:\LeiLing\5-Project\0-GitHub\MiCoos.Blog\MiCoos.Blog\bin\zh-Hans\System.Web.WebPages.resources.dll
 D:\LeiLing\5-Project\0-GitHub\MiCoos.Blog\MiCoos.Blog\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\LeiLing\5-Project\0-GitHub\MiCoos.Blog\MiCoos.Blog\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-D:\LeiLing\5-Project\0-GitHub\MiCoos.Blog\MiCoos.Blog\obj\Debug\MiCoos.Blog.csproj.CoreCompileInputs.cache
 D:\LeiLing\5-Project\0-GitHub\MiCoos.Blog\MiCoos.Blog\obj\Debug\MiCoos.Blog.dll
 D:\LeiLing\5-Project\0-GitHub\MiCoos.Blog\MiCoos.Blog\obj\Debug\MiCoos.Blog.pdb
 D:\LeiLing\5-Project\0-GitHub\MiCoos.Blog\MiCoos.Blog\obj\Debug\MiCoos.Blog.csprojResolveAssemblyReference.cache
