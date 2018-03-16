@@ -1,0 +1,63 @@
+﻿@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+	<link rel="stylesheet" href="~/Content/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="~/Content/linearicons/style.css" />
+	<link rel="stylesheet" href="~/Content/css/mian.css" />
+</head>
+<body>
+	<div class="well" style="max-width: 300px; margin: 0 auto;margin-top:200px;">
+		<div class="form-group">
+			<label for="userName">UserName</label>
+			<input type="email" class="form-control" id="userName" placeholder="UserName">
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" id="password" placeholder="Password">
+		</div>
+		<button type="button" id="cancel" class="btn btn-danger">取消</button>
+		<button type="button" id="login" class="btn btn-primary">登录</button>
+	</div>
+	<script src="../Content/jquery/jquery-3.2.1.js"></script>
+	<script src="../Content/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#login').click(function () {
+				var userName = $('#userName').val();
+				var password = $('#password').val();
+				if (!(userName && password)) {
+					alert("login error!");
+				}
+				$.ajax({
+					url: "login",
+					async: true,
+					type:'post',
+					dataType: 'json',
+					data: { UserName: userName, Password: password },
+					success: function (result) {
+						if (result && result.success==true)
+						{
+							alert('login success!');
+						}
+						else if (result && result.success == false) {
+							alert('login fail!');
+						}
+						else {
+							alert('server error!');
+						}
+					}
+				});
+
+			});
+		});
+	</script>
+</body>
+</html>
