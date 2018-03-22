@@ -1,0 +1,57 @@
+SQL命令类型
+1.数据定义语言（DDL）
+  用于创建和重构数据库对象。如创建表、删除表、修改表
+  主要DDL包括：
+    CREATE	TABLE
+	ALTER	TABLE
+	DROP	TABLE
+	CREATE	INDEX
+	ALTER	INDEX
+	DROP	INDEX
+	CREATE	VIEW
+	DROP	VIEW
+
+2.数据操作语言（DML）
+  用于操作关系型数据库对象内部数据
+  主要DML命令：
+    INSERT
+	UPDATE
+	DELETE
+	
+
+3.数据查询语言（DQL）
+  用于数据查询，只有一个命令。
+  SELECT
+  
+4.数据控制语言（DCL）
+  用于控制对数据库里数据的访问；通常用于创建与用户访问的对象，以及控制用户权限。
+    ALTER	PASSWORD
+	GRANT
+	REVOKE
+	CREATE	SYNONYM
+	
+5.数据管理命令
+  用于对数据库里的操作进行审计和分析，还有助于分析系统性能。
+  主要的数据管理命令：
+  START	AUDIT
+  STOP	AUDIT
+6.事务控制命令
+  主要命名：
+    COMMIT 保存数据库事务
+	ROLLBACK 撤销数据库事务
+	SAVEPOINT 在一组事务里创建标记点用于回退
+	SET TRANSACTION 设置事务名称
+
+
+
+
+
+
+
+
+
+
+
+
+
+
