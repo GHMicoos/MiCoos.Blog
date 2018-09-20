@@ -1,0 +1,9 @@
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.1\MiBlog.EF.deps.json
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.1\MiBlog.EF.dll
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.1\MiBlog.EF.pdb
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.csprojAssemblyReference.cache
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.csproj.CoreCompileInputs.cache
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.AssemblyInfoInputs.cache
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.AssemblyInfo.cs
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.dll
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.pdb

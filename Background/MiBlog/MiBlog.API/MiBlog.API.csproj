@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MiBlog.Abstraction\MiBlog.Abstraction.csproj" />
+    <ProjectReference Include="..\MiBlog.EF\MiBlog.EF.csproj" />
+    <ProjectReference Include="..\MiBlog.Service\MiBlog.Service.csproj" />
+  </ItemGroup>
+
+</Project>

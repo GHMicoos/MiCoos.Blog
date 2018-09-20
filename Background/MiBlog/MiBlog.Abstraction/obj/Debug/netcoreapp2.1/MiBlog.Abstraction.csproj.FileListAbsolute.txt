@@ -1,0 +1,12 @@
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\bin\Debug\netcoreapp2.1\MiBlog.Abstraction.deps.json
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\bin\Debug\netcoreapp2.1\MiBlog.Abstraction.dll
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\bin\Debug\netcoreapp2.1\MiBlog.Abstraction.pdb
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\bin\Debug\netcoreapp2.1\MiBlog.EF.dll
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\bin\Debug\netcoreapp2.1\MiBlog.EF.pdb
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\obj\Debug\netcoreapp2.1\MiBlog.Abstraction.csprojAssemblyReference.cache
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\obj\Debug\netcoreapp2.1\MiBlog.Abstraction.csproj.CoreCompileInputs.cache
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\obj\Debug\netcoreapp2.1\MiBlog.Abstraction.AssemblyInfoInputs.cache
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\obj\Debug\netcoreapp2.1\MiBlog.Abstraction.AssemblyInfo.cs
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\obj\Debug\netcoreapp2.1\MiBlog.Abstraction.csproj.CopyComplete
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\obj\Debug\netcoreapp2.1\MiBlog.Abstraction.dll
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Abstraction\obj\Debug\netcoreapp2.1\MiBlog.Abstraction.pdb

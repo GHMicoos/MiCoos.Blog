@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Service\" />
+    <Folder Include="Store\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MiBlog.EF\MiBlog.EF.csproj" />
+  </ItemGroup>
+
+</Project>

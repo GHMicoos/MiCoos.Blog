@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "MiBlog.Abstraction/1.0.0": {
+        "dependencies": {
+          "MiBlog.EF": "1.0.0"
+        },
+        "runtime": {
+          "MiBlog.Abstraction.dll": {}
+        }
+      },
+      "MiBlog.EF/1.0.0": {
+        "runtime": {
+          "MiBlog.EF.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MiBlog.Abstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MiBlog.EF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

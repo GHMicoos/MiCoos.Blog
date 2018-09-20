@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "MiBlog.API/1.0.0": {
+        "dependencies": {
+          "MiBlog.Abstraction": "1.0.0",
+          "MiBlog.EF": "1.0.0",
+          "MiBlog.Service": "1.0.0"
+        },
+        "runtime": {
+          "MiBlog.API.dll": {}
+        }
+      },
+      "MiBlog.Abstraction/1.0.0": {
+        "dependencies": {
+          "MiBlog.EF": "1.0.0"
+        },
+        "runtime": {
+          "MiBlog.Abstraction.dll": {}
+        }
+      },
+      "MiBlog.EF/1.0.0": {
+        "runtime": {
+          "MiBlog.EF.dll": {}
+        }
+      },
+      "MiBlog.Service/1.0.0": {
+        "dependencies": {
+          "MiBlog.Abstraction": "1.0.0",
+          "MiBlog.EF": "1.0.0"
+        },
+        "runtime": {
+          "MiBlog.Service.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MiBlog.API/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MiBlog.Abstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MiBlog.EF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MiBlog.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
