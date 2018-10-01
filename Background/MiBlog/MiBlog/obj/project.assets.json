@@ -11583,11 +11583,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog\\MiBlog.Host.csproj",
+      "projectUniqueName": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog\\MiBlog.Host.csproj",
       "projectName": "MiBlog.Host",
-      "projectPath": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog\\MiBlog.Host.csproj",
+      "projectPath": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog\\MiBlog.Host.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog\\obj\\",
+      "outputPath": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11601,23 +11601,22 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://10.1.2.254:10000/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.Abstraction\\MiBlog.Abstraction.csproj": {
-              "projectPath": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.Abstraction\\MiBlog.Abstraction.csproj"
+            "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.Abstraction\\MiBlog.Abstraction.csproj": {
+              "projectPath": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.Abstraction\\MiBlog.Abstraction.csproj"
             },
-            "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.API\\MiBlog.API.csproj": {
-              "projectPath": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.API\\MiBlog.API.csproj"
+            "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.API\\MiBlog.API.csproj": {
+              "projectPath": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.API\\MiBlog.API.csproj"
             },
-            "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\MiBlog.EF.csproj": {
-              "projectPath": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\MiBlog.EF.csproj"
+            "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\MiBlog.EF.csproj": {
+              "projectPath": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\MiBlog.EF.csproj"
             },
-            "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.Service\\MiBlog.Service.csproj": {
-              "projectPath": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.Service\\MiBlog.Service.csproj"
+            "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.Service\\MiBlog.Service.csproj": {
+              "projectPath": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.Service\\MiBlog.Service.csproj"
             }
           }
         }

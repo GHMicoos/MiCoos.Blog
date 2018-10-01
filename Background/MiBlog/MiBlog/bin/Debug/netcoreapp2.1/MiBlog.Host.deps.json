@@ -244,7 +244,8 @@
       "MiBlog.Service/1.0.0": {
         "dependencies": {
           "MiBlog.Abstraction": "1.0.0",
-          "MiBlog.EF": "1.0.0"
+          "MiBlog.EF": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1"
         },
         "runtime": {
           "MiBlog.Service.dll": {}
