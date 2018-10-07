@@ -16,3 +16,5 @@ D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.AssemblyInfo.cs
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.dll
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.pdb
+D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.1\MiBlog.EF.runtimeconfig.json
+D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.1\MiBlog.EF.runtimeconfig.dev.json
