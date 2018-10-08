@@ -30,3 +30,7 @@ D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.API\obj\Debug\netcoreapp2
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.API\obj\Debug\netcoreapp2.1\MiBlog.API.csproj.CopyComplete
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.API\obj\Debug\netcoreapp2.1\MiBlog.API.dll
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.API\obj\Debug\netcoreapp2.1\MiBlog.API.pdb
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.API\bin\Debug\netcoreapp2.1\MiBlog.API.runtimeconfig.json
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.API\bin\Debug\netcoreapp2.1\MiBlog.API.runtimeconfig.dev.json
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.API\bin\Debug\netcoreapp2.1\MiBlog.API.xml
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.API\bin\Debug\netcoreapp2.1\MiBlog.Abstraction.xml

@@ -29,7 +29,7 @@ namespace MiBlog.EF.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlite("DataSource=D:\\Project\\github\\MiCoos.Blog\\DataBase\\blog.db");
+                optionsBuilder.UseSqlite("DataSource=D:\\0-leiling\\5-github\\MiCoos.Blog\\DataBase\\blog.db");
             }
         }
 
@@ -116,6 +116,8 @@ namespace MiBlog.EF.Models
                 entity.Property(e => e.LabelId)
                     .HasColumnName("LabelID")
                     .ValueGeneratedNever();
+
+                entity.Property(e => e.Creator).IsRequired();
 
                 entity.Property(e => e.Name).IsRequired();
             });

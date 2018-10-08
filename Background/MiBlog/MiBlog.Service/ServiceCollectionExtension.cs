@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MiBlog.Abstraction.Interface.Service;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MiBlog.Service
@@ -9,7 +10,10 @@ namespace MiBlog.Service
     {
         public static IServiceCollection AddService(this IServiceCollection service)
         {
-            //services.AddTransient<IIntegratedServiceClient, IntegratedServiceClient>();
+            service.AddTransient<IBaseService, BaseService>();
+            service.AddTransient<IBlogService, BlogService>();
+            service.AddTransient<IUsreInfoService, UsreInfoService>();
+
             return service;
         }
     }

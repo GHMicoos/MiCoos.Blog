@@ -5,8 +5,8 @@ namespace MiBlog.EF.Models
 {
     public partial class TLoginInfo
     {
-        public byte[] LoginId { get; set; }
-        public byte[] UserId { get; set; }
+        public string LoginId { get; set; }
+        public string UserId { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public long State { get; set; }

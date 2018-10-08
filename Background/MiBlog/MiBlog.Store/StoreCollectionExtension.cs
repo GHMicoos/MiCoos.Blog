@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MiBlog.Abstraction.Interface.Store;
+using MiBlog.EF;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,8 +15,11 @@ namespace MiBlog.Store
             string sqlConnection
         )
         {
-            //services.AddDbContext<CrmDbContext>(options =>options.UseSqlServer(sqlConnection));
-            //services.AddTransient<ICustomerPoolStore, CustomerPoolStore>();
+            services.AddDbContext<BlogDBContext>(options =>options.UseSqlite(sqlConnection));
+            services.AddTransient<IBlogDBContext, BlogDBContext>();
+
+            services.AddTransient<IBlogStore, BlogStore>();
+            services.AddTransient<IUserInfoStore, UserInfoStore>();
 
             return services;
         }

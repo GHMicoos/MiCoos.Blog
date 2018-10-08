@@ -5,8 +5,8 @@ namespace MiBlog.EF.Models
 {
     public partial class TLabelArticle
     {
-        public byte[] LabelArticleId { get; set; }
-        public byte[] ArticleId { get; set; }
-        public byte[] LabelId { get; set; }
+        public string LabelArticleId { get; set; }
+        public string ArticleId { get; set; }
+        public string LabelId { get; set; }
     }
 }

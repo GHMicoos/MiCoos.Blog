@@ -5,8 +5,8 @@ namespace MiBlog.EF.Models
 {
     public partial class TCategoryArticle
     {
-        public byte[] ArticleCategoryId { get; set; }
-        public byte[] ArticleId { get; set; }
-        public byte[] CategoryId { get; set; }
+        public string ArticleCategoryId { get; set; }
+        public string ArticleId { get; set; }
+        public string CategoryId { get; set; }
     }
 }

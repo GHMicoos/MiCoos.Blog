@@ -44,3 +44,7 @@ D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog\obj\Debug\netcoreapp2.1\M
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog\obj\Debug\netcoreapp2.1\MiBlog.Host.csproj.CopyComplete
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog\obj\Debug\netcoreapp2.1\MiBlog.Host.dll
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog\obj\Debug\netcoreapp2.1\MiBlog.Host.pdb
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog\bin\Debug\netcoreapp2.1\MiBlog.Store.dll
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog\bin\Debug\netcoreapp2.1\MiBlog.Store.pdb
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog\bin\Debug\netcoreapp2.1\MiBlog.Abstraction.xml
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog\bin\Debug\netcoreapp2.1\MiBlog.API.xml

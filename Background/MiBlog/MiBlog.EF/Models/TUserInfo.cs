@@ -11,7 +11,7 @@ namespace MiBlog.EF.Models
             TLoginInfo = new HashSet<TLoginInfo>();
         }
 
-        public byte[] UserId { get; set; }
+        public string UserId { get; set; }
         public string Name { get; set; }
         public string ProfilePicture { get; set; }
         public string Address { get; set; }

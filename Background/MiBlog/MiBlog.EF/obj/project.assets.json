@@ -3471,11 +3471,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\MiBlog.EF.csproj",
+      "projectUniqueName": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\MiBlog.EF.csproj",
       "projectName": "MiBlog.EF",
-      "projectPath": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\MiBlog.EF.csproj",
+      "projectPath": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\MiBlog.EF.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\obj\\",
+      "outputPath": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\MiBlog.EF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3489,6 +3489,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://10.1.2.254:10000/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

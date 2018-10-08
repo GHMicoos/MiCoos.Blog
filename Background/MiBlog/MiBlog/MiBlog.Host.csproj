@@ -9,7 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +20,7 @@
     <ProjectReference Include="..\MiBlog.API\MiBlog.API.csproj" />
     <ProjectReference Include="..\MiBlog.EF\MiBlog.EF.csproj" />
     <ProjectReference Include="..\MiBlog.Service\MiBlog.Service.csproj" />
+    <ProjectReference Include="..\MiBlog.Store\MiBlog.Store.csproj" />
   </ItemGroup>
 
 </Project>

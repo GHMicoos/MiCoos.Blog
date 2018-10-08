@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiBlog.Abstraction</name>
+    </assembly>
+    <members>
+        <member name="T:MiBlog.Abstraction.Common.CommonConstValue">
+            <summary>
+            静态字符串
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_Message_ParamError">
+            <summary>
+            请求响应基类-消息-参数错误
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_Message_Success">
+            <summary>
+            请求响应基类-消息-操作成功
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_Message_Fail">
+            <summary>
+            请求响应基类-消息-操作失败
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_Message_Error">
+            <summary>
+            请求响应基类-消息-操作错误
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_DefaultRecordCount">
+            <summary>
+            请求响应基类-返回记录总数-默认值
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.RequestBase">
+            <summary>
+            请求基类
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.RequestBase.IsPage">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.RequestBase.PageIndex">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.RequestBase.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.ResponseBase`1">
+            <summary>
+            请求响应类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ResponseBase`1.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.ResponseBase`1.Status">
+            <summary>
+            响应状态
+            枚举：0失败，1成功，2错误
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.ResponseBase`1.Message">
+            <summary>
+            响应消息字符串
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.ResponseBase`1.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.ResponseBase`1.RecordCount">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.ResponseStatus">
+            <summary>
+            响应状态
+            枚举：0失败，1成功，2错误
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.ResponseStatus.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.ResponseStatus.Fail">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.ResponseStatus.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IBlogService.QueryUserInfo">
+            <summary>
+            查询所有客户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.Interface.Service.IUsreInfoService">
+            <summary>
+            逻辑层-用户信息
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IUsreInfoService.QueryUserInfo(MiBlog.Abstraction.ViewModel.ReqQueryUserInfo)">
+            <summary>
+            查询用户信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IBlogStore.QueryUserInfo">
+            <summary>
+            查询用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.Interface.Store.IUserInfoStore">
+            <summary>
+            存储层-用户信息
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IUserInfoStore.QueryUserInfo">
+            <summary>
+            查询用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo">
+            <summary>
+            请求参数-查询用户信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo.RegistTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.RespQueryUserInfo">
+            <summary>
+            请求结果：用户信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfo.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfo.Name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfo.ProfilePicture">
+            <summary>
+            头像位置
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfo.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfo.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfo.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfo.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfo.RegistTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase">
+            <summary>
+            请求结果：用户信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase.Name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase.ProfilePicture">
+            <summary>
+            头像位置
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespQueryUserInfoBase.RegistTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+    </members>
+</doc>

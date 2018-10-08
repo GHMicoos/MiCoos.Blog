@@ -26,3 +26,4 @@ D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.Service\obj\Debug\netcore
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.Service\obj\Debug\netcoreapp2.1\MiBlog.Service.csproj.CopyComplete
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.Service\obj\Debug\netcoreapp2.1\MiBlog.Service.dll
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.Service\obj\Debug\netcoreapp2.1\MiBlog.Service.pdb
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.Service\bin\Debug\netcoreapp2.1\MiBlog.Abstraction.xml

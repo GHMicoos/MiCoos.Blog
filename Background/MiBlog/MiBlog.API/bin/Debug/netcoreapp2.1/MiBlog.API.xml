@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiBlog.API</name>
+    </assembly>
+    <members>
+        <member name="T:MiBlog.Api.BasicController">
+            <summary>
+            基础控制器
+            </summary>
+        </member>
+        <member name="M:MiBlog.Api.BasicController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,MiBlog.Abstraction.Interface.Service.IBaseService)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:MiBlog.Api.BasicController.SetService">
+            <summary>
+            设置服务层属性
+            </summary>
+        </member>
+        <member name="M:MiBlog.Api.BasicController.CheckIsVaild">
+            <summary>
+            检查传入参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Api.BasicController.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:MiBlog.API.BlogController">
+            <summary>
+            博客管理
+            </summary>
+        </member>
+        <member name="M:MiBlog.API.BlogController.QueryUserInfo(MiBlog.Abstraction.ViewModel.ReqQueryUserInfo)">
+            <summary>
+            测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.API.Controller.UserController">
+            <summary>
+            博客管理
+            </summary>
+        </member>
+        <member name="M:MiBlog.API.Controller.UserController.#ctor(MiBlog.Abstraction.Interface.Service.IUsreInfoService,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:MiBlog.API.Controller.UserController.QueryUserInfo(MiBlog.Abstraction.ViewModel.ReqQueryUserInfo)">
+            <summary>
+            查询用户信息
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
