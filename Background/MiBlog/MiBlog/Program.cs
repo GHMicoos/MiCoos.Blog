@@ -19,6 +19,15 @@ namespace MiBlog
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration(
+                    (hostingContext,builder)=>
+                    {
+                        builder
+                        .SetBasePath(Microsoft.Extensions.PlatformAbstractions.PlatformServices.Default.Application.ApplicationBasePath)
+                        .AddJsonFile("config.json", optional: true, reloadOnChange: true)
+                        .Build();
+                    }
+                )
                 .UseStartup<Startup>();
     }
 }

@@ -33,15 +33,47 @@
             </summary>
             <param name="filterContext"></param>
         </member>
+        <member name="M:MiBlog.Api.BasicController.SetResultWhenSuccess``1(MiBlog.Abstraction.Common.ResponseBase{``0},``0)">
+            <summary>
+            设置结果对象，当成功
+            </summary>
+            <typeparam name="TData"></typeparam>
+            <param name="result"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:MiBlog.Api.BasicController.SetResultWhenFail``1(MiBlog.Abstraction.Common.ResponseBase{``0},``0)">
+            <summary>
+            设置结果对象，当失败
+            </summary>
+            <typeparam name="TData"></typeparam>
+            <param name="result"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:MiBlog.Api.BasicController.SetResultWhenError``1(MiBlog.Abstraction.Common.ResponseBase{``0},System.Exception)">
+            <summary>
+            设置结果对象，当错误
+            </summary>
+            <typeparam name="TData"></typeparam>
+            <param name="result"></param>
+            <param name="e"></param>
+        </member>
         <member name="T:MiBlog.API.BlogController">
             <summary>
             博客管理
             </summary>
         </member>
-        <member name="M:MiBlog.API.BlogController.QueryUserInfo(MiBlog.Abstraction.ViewModel.ReqQueryUserInfo)">
+        <member name="M:MiBlog.API.BlogController.QueryArticleDetailInfo(System.Guid)">
             <summary>
-            测试
+            查询文章详细信息
             </summary>
+            <param name="param">文章id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.API.BlogController.Test">
+            <summary>
+            查询文章详细信息
+            </summary>
+            <param name="param">文章id</param>
             <returns></returns>
         </member>
         <member name="T:MiBlog.API.Controller.UserController">
@@ -59,6 +91,18 @@
         <member name="M:MiBlog.API.Controller.UserController.QueryUserInfo(MiBlog.Abstraction.ViewModel.ReqQueryUserInfo)">
             <summary>
             查询用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.API.Controller.UserController.RegistUser(MiBlog.Abstraction.ViewModel.User.ReqAddLoginInfo)">
+            <summary>
+            注册用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.API.Controller.UserController.UpdateUserInfo(MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo)">
+            <summary>
+            更新用户信息
             </summary>
             <returns></returns>
         </member>

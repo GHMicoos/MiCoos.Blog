@@ -8,5 +8,8 @@ namespace MiBlog.EF.Models
         public string ArticleCategoryId { get; set; }
         public string ArticleId { get; set; }
         public string CategoryId { get; set; }
+
+        public TArticle Article { get; set; }
+        public TCategory Category { get; set; }
     }
 }

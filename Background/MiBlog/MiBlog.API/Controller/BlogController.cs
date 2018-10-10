@@ -1,6 +1,7 @@
 ﻿using MiBlog.Abstraction.Common;
 using MiBlog.Abstraction.Interface.Service;
 using MiBlog.Abstraction.ViewModel;
+using MiBlog.Abstraction.ViewModel.Blog;
 using MiBlog.Api;
 using MiBlog.EF.Models;
 using Microsoft.AspNetCore.Cors;
@@ -10,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using static MiBlog.Abstraction.AutoMapper.BlogProfile;
 
 namespace MiBlog.API
 {
@@ -28,14 +30,32 @@ namespace MiBlog.API
         }
 
         /// <summary>
-        /// 测试
+        /// 查询文章详细信息
         /// </summary>
+        /// <param name="param">文章id</param>
         /// <returns></returns>
         [HttpGet]
-        [Route("QueryUserInfo")]
-        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<List<RespQueryUserInfo>>))]
-        public IActionResult QueryUserInfo([FromForm]ReqQueryUserInfo param)
-            //=> new JsonResult(CallService<ReqQueryUserInfo, List<RespQueryUserInfo>>(param, _service.QueryUserInfo));
-        => new JsonResult(_service.QueryUserInfo());
+        [Route("QueryArticleDetailInfo")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<RespArticleDetailInfo>))]
+        public IActionResult QueryArticleDetailInfo(Guid param)
+        {
+            var result = new ResponseBase<RespArticleDetailInfo>();
+            try
+            {
+                var data = _service.QueryArticleDetailInfo(param);//调用逻辑层
+                if (data!= null) SetResultWhenSuccess<RespArticleDetailInfo>(result, data);
+                else SetResultWhenFail<RespArticleDetailInfo>(result, data);
+            }
+            catch (Exception e)
+            {
+                SetResultWhenError<RespArticleDetailInfo>(result, e);
+            }
+
+            return new JsonResult(result);
+        }
+
+
+
+       
     }
 }

@@ -5,6 +5,13 @@ namespace MiBlog.EF.Models
 {
     public partial class TArticle
     {
+        public TArticle()
+        {
+            TCategoryArticle = new HashSet<TCategoryArticle>();
+            TComment = new HashSet<TComment>();
+            TLabelArticle = new HashSet<TLabelArticle>();
+        }
+
         public string ArticleId { get; set; }
         public string Title { get; set; }
         public string ContentText { get; set; }
@@ -14,5 +21,8 @@ namespace MiBlog.EF.Models
         public long? PublistTime { get; set; }
 
         public TUserInfo AuthorNavigation { get; set; }
+        public ICollection<TCategoryArticle> TCategoryArticle { get; set; }
+        public ICollection<TComment> TComment { get; set; }
+        public ICollection<TLabelArticle> TLabelArticle { get; set; }
     }
 }

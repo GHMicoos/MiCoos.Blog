@@ -27,5 +27,50 @@ namespace MiBlog.Store
         /// <returns></returns>
         public IQueryable<TUserInfo> QueryUserInfo()
             => _dbContext.TUserInfo.AsNoTracking();
+
+        /// <summary>
+        /// 添加用户信息
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool AddUserInfo(TUserInfo data)
+        {
+            _dbContext.TUserInfo.Add(data);
+            _dbContext.Save();
+            return true;
+        }
+
+        /// <summary>
+        /// 更新用户信息
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool UpdateUserInfo(TUserInfo data)
+        {
+            _dbContext.TUserInfo.Update(data);
+            _dbContext.Save();
+            return true;
+        }
+
+        /// <summary>
+        /// 添加登录信息
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool AddLoginInfo(TLoginInfo data)
+        {
+            _dbContext.TLoginInfo.Add(data);
+            _dbContext.Save();
+            return true;
+        }
+
+        /// <summary>
+        /// 查询登录信息
+        /// </summary>
+        /// <returns></returns>
+        public IQueryable<TLoginInfo> QueryLoginInfo()
+            => _dbContext.TLoginInfo.AsNoTracking();
+
+
     }
 }

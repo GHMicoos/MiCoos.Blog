@@ -21,7 +21,24 @@ namespace MiBlog.Store
             _dbContext = dbContext;
         }
 
-        public IQueryable<TUserInfo> QueryUserInfo()
-            => _dbContext.TUserInfo.AsNoTracking();
+        /// <summary>
+        /// 查询文章
+        /// </summary>
+        /// <returns></returns>
+        public IQueryable<TArticle> QueryArticle()
+            => _dbContext.TArticle.AsNoTracking();
+
+        /// <summary>
+        /// 查询 文章标签表
+        /// </summary>
+        /// <returns></returns>
+        public IQueryable<TLabelArticle> QueryLabelArticle()
+            => _dbContext.TLabelArticle.AsNoTracking();
+        /// <summary>
+        /// 查询 评论
+        /// </summary>
+        /// <returns></returns>
+        public IQueryable<TComment> QueryComment()
+            => _dbContext.TComment.AsNoTracking();
     }
 }

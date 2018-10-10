@@ -18,11 +18,16 @@ namespace MiBlog.Abstraction.ViewModel
         /// <summary>
         /// 姓名
         /// </summary>
-        public Guid Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// 注册时间
+        /// 注册时间-开始
         /// </summary>
-        public DateTime RegistTime { get; set; }
+        public DateTime? RegistTimeStart { get; set; }
+
+        /// <summary>
+        /// 注册时间-结束
+        /// </summary>
+        public DateTime? RegistTimeEnd { get; set; }
     }
 }

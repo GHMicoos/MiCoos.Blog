@@ -67,6 +67,10 @@ namespace MiBlog.EF.Models
                 entity.Property(e => e.Creator).IsRequired();
 
                 entity.Property(e => e.Name).IsRequired();
+
+                entity.HasOne(d => d.CreatorNavigation)
+                    .WithMany(p => p.TCategory)
+                    .HasForeignKey(d => d.Creator);
             });
 
             modelBuilder.Entity<TCategoryArticle>(entity =>
@@ -86,6 +90,14 @@ namespace MiBlog.EF.Models
                 entity.Property(e => e.CategoryId)
                     .IsRequired()
                     .HasColumnName("CategoryID");
+
+                entity.HasOne(d => d.Article)
+                    .WithMany(p => p.TCategoryArticle)
+                    .HasForeignKey(d => d.ArticleId);
+
+                entity.HasOne(d => d.Category)
+                    .WithMany(p => p.TCategoryArticle)
+                    .HasForeignKey(d => d.CategoryId);
             });
 
             modelBuilder.Entity<TComment>(entity =>
@@ -98,13 +110,24 @@ namespace MiBlog.EF.Models
                     .HasColumnName("CommentID")
                     .ValueGeneratedNever();
 
+                entity.Property(e => e.ArticleId)
+                    .IsRequired()
+                    .HasColumnName("ArticleID");
+
                 entity.Property(e => e.CommentText).IsRequired();
 
                 entity.Property(e => e.Creator).IsRequired();
 
-                entity.Property(e => e.FatherId)
-                    .IsRequired()
-                    .HasColumnName("FatherID");
+                entity.Property(e => e.FatherCommentId).HasColumnName("FatherCommentID");
+
+                entity.HasOne(d => d.Article)
+                    .WithMany(p => p.TComment)
+                    .HasForeignKey(d => d.ArticleId);
+
+                entity.HasOne(d => d.FatherComment)
+                    .WithMany(p => p.InverseFatherComment)
+                    .HasForeignKey(d => d.FatherCommentId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<TLabel>(entity =>
@@ -120,6 +143,10 @@ namespace MiBlog.EF.Models
                 entity.Property(e => e.Creator).IsRequired();
 
                 entity.Property(e => e.Name).IsRequired();
+
+                entity.HasOne(d => d.CreatorNavigation)
+                    .WithMany(p => p.TLabel)
+                    .HasForeignKey(d => d.Creator);
             });
 
             modelBuilder.Entity<TLabelArticle>(entity =>
@@ -139,6 +166,14 @@ namespace MiBlog.EF.Models
                 entity.Property(e => e.LabelId)
                     .IsRequired()
                     .HasColumnName("LabelID");
+
+                entity.HasOne(d => d.Article)
+                    .WithMany(p => p.TLabelArticle)
+                    .HasForeignKey(d => d.ArticleId);
+
+                entity.HasOne(d => d.Label)
+                    .WithMany(p => p.TLabelArticle)
+                    .HasForeignKey(d => d.LabelId);
             });
 
             modelBuilder.Entity<TLoginInfo>(entity =>

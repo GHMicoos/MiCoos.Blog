@@ -8,6 +8,8 @@ namespace MiBlog.EF.Models
         public TUserInfo()
         {
             TArticle = new HashSet<TArticle>();
+            TCategory = new HashSet<TCategory>();
+            TLabel = new HashSet<TLabel>();
             TLoginInfo = new HashSet<TLoginInfo>();
         }
 
@@ -21,6 +23,8 @@ namespace MiBlog.EF.Models
         public long RegistTime { get; set; }
 
         public ICollection<TArticle> TArticle { get; set; }
+        public ICollection<TCategory> TCategory { get; set; }
+        public ICollection<TLabel> TLabel { get; set; }
         public ICollection<TLoginInfo> TLoginInfo { get; set; }
     }
 }

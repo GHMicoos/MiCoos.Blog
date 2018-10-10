@@ -1,4 +1,5 @@
 ﻿using MiBlog.Abstraction.ViewModel;
+using MiBlog.Abstraction.ViewModel.User;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,7 +15,21 @@ namespace MiBlog.Abstraction.Interface.Service
         /// 查询用户信息
         /// </summary>
         /// <param name="param"></param>
+        /// <param name="count"></param>
         /// <returns></returns>
-        IList<RespQueryUserInfo> QueryUserInfo(ReqQueryUserInfo param);
+        IList<RespUserInfo> QueryUserInfo(ReqQueryUserInfo param,out int count);
+
+        /// <summary>
+        /// 注册用户
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        bool RegistUser(ReqAddLoginInfo param);
+
+        /// <summary>
+        /// 更新用户信息
+        /// </summary>
+        /// <returns></returns>
+        bool UpdateUserInfo(ReqUpdateUserInfo param);
     }
 }
