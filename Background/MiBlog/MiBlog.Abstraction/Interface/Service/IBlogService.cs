@@ -17,6 +17,14 @@ namespace MiBlog.Abstraction.Interface.Service
         /// <param name="param">文章id</param>
         /// <returns></returns>
         RespArticleDetailInfo QueryArticleDetailInfo(Guid param);
-        
+
+        /// <summary>
+        /// 查询文章评论信息
+        /// </summary>
+        /// <param name="param">文章id</param>
+        /// <returns></returns>
+        RespArticleCommentDetailInfo QueryArticleCommentDetailInfo(ReqArticleCommentDetailInfo param);
+
+
     }
 }

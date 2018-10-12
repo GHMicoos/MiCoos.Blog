@@ -9,6 +9,7 @@
             以下都是自定绑定的
             string->Guid
             int->Enum
+            int型->bool
             不能自动绑定的
             long->Datetime
             </summary>
@@ -87,6 +88,27 @@
             只允许英文字母、数字、下划线、英文句号、以及中划线组成
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.DifineEnum.ArticleState">
+            <summary>
+            文章状态
+            枚举：0草稿，1发布，2删除
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.ArticleState.Draft">
+            <summary>
+            0草稿
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.ArticleState.Publish">
+            <summary>
+            1发布
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.ArticleState.Delete">
+            <summary>
+            2删除
+            </summary>
         </member>
         <member name="T:MiBlog.Abstraction.Common.DifineEnum.CommentState">
             <summary>
@@ -325,6 +347,13 @@
             <param name="param">文章id</param>
             <returns></returns>
         </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IBlogService.QueryArticleCommentDetailInfo(MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo)">
+            <summary>
+            查询文章评论信息
+            </summary>
+            <param name="param">文章id</param>
+            <returns></returns>
+        </member>
         <member name="T:MiBlog.Abstraction.Interface.Service.IUsreInfoService">
             <summary>
             逻辑层-用户信息
@@ -407,6 +436,36 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo">
+            <summary>
+            请求参数：查询文章评论详细信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo.ArticleId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo.TopHotCommnetCount">
+            <summary>
+            最热文章数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespArticleCommentDetailInfo">
+            <summary>
+            返回结果-文章评论详细信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleCommentDetailInfo.TopHot">
+            <summary>
+            最新热评论
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleCommentDetailInfo.TopNew">
+            <summary>
+            最新评论
+            </summary>
+        </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleDetailInfo.ArticleInfo">
             <summary>
             文章信息
@@ -474,37 +533,58 @@
         </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.CommentId">
             <summary>
-            
+            评论id
             </summary>
         </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.CommentText">
             <summary>
-            
+            评论内容
             </summary>
         </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.ArticleId">
             <summary>
-            
+            文章id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.RootCommentId">
+            <summary>
+            根评论id
             </summary>
         </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.FatherCommentId">
             <summary>
-            
+            父评论id
             </summary>
         </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.Creator">
             <summary>
-            /
+            创建者
             </summary>
         </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.CreateTime">
             <summary>
-            
+            创建时间
             </summary>
         </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.State">
             <summary>
-            
+            评论状态
+            枚举：0正常的，1用户删除，2违法的或不合规的，3审核中
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.CreatorNavigation">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.FatherCommentCreator">
+            <summary>
+            父评论创建者
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.ChildCommentList">
+            <summary>
+            子评论
             </summary>
         </member>
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespLabel.LabelId">

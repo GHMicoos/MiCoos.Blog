@@ -9,6 +9,7 @@ namespace MiBlog.EF.Models
         {
             TArticle = new HashSet<TArticle>();
             TCategory = new HashSet<TCategory>();
+            TComment = new HashSet<TComment>();
             TLabel = new HashSet<TLabel>();
             TLoginInfo = new HashSet<TLoginInfo>();
         }
@@ -24,6 +25,7 @@ namespace MiBlog.EF.Models
 
         public ICollection<TArticle> TArticle { get; set; }
         public ICollection<TCategory> TCategory { get; set; }
+        public ICollection<TComment> TComment { get; set; }
         public ICollection<TLabel> TLabel { get; set; }
         public ICollection<TLoginInfo> TLoginInfo { get; set; }
     }

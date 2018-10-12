@@ -120,13 +120,24 @@ namespace MiBlog.EF.Models
 
                 entity.Property(e => e.FatherCommentId).HasColumnName("FatherCommentID");
 
+                entity.Property(e => e.RootCommentId).HasColumnName("RootCommentID");
+
                 entity.HasOne(d => d.Article)
                     .WithMany(p => p.TComment)
                     .HasForeignKey(d => d.ArticleId);
 
+                entity.HasOne(d => d.CreatorNavigation)
+                    .WithMany(p => p.TComment)
+                    .HasForeignKey(d => d.Creator);
+
                 entity.HasOne(d => d.FatherComment)
                     .WithMany(p => p.InverseFatherComment)
                     .HasForeignKey(d => d.FatherCommentId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(d => d.RootComment)
+                    .WithMany(p => p.InverseRootComment)
+                    .HasForeignKey(d => d.RootCommentId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
 

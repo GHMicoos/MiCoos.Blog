@@ -26,6 +26,11 @@ namespace MiBlog.Abstraction.ViewModel.Blog
         public Guid ArticleId { get; set; }
 
         /// <summary>
+        /// 根评论id
+        /// </summary>
+        public Guid RootCommentId { get; set; }
+
+        /// <summary>
         /// 父评论id
         /// </summary>
         public Guid FatherCommentId { get; set; }
@@ -46,6 +51,19 @@ namespace MiBlog.Abstraction.ViewModel.Blog
         /// </summary>
         public CommentState State { get; set; }
 
+        /// <summary>
+        /// 创建者
+        /// </summary>
+        public RespUserInfo CreatorNavigation { get; set; }
 
+        /// <summary>
+        /// 父评论创建者
+        /// </summary>
+        public RespUserInfo FatherCommentCreator{ get; set; }
+
+        /// <summary>
+        /// 子评论
+        /// </summary>
+        public IList<RespComment> ChildCommentList { get; set; }
     }
 }

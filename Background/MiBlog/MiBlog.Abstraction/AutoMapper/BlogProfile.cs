@@ -38,7 +38,12 @@ namespace MiBlog.Abstraction.AutoMapper
                 = CreateMap<TLabel, RespLabel>();
             map_Label_RespLabel
                 .ForMember(d => d.CreateTime, opt => opt.MapFrom(s => s.CreateTime.ConvertToDateTime()));
-            
+
+            var map_Comment_RespComment
+                = CreateMap<TComment, RespComment>();
+            map_Comment_RespComment
+                .ForMember(d => d.CreateTime, opt => opt.MapFrom(s => s.CreateTime.ConvertToDateTime()));
+
 
         }
 

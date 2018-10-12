@@ -19,3 +19,4 @@ D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.
 D:\Project\github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.1\MiBlog.EF.runtimeconfig.dev.json
 D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.1\MiBlog.EF.runtimeconfig.json
 D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\bin\Debug\netcoreapp2.1\MiBlog.EF.runtimeconfig.dev.json
+D:\0-leiling\5-github\MiCoos.Blog\Background\MiBlog\MiBlog.EF\obj\Debug\netcoreapp2.1\MiBlog.EF.csprojAssemblyReference.cache

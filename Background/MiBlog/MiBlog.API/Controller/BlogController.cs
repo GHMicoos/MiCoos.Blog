@@ -54,8 +54,33 @@ namespace MiBlog.API
             return new JsonResult(result);
         }
 
+        /// <summary>
+        /// 查询文章评论信息
+        /// </summary>
+        /// <param name="param">文章id</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("QueryArticleCommentDetailInfo")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<RespArticleCommentDetailInfo>))]
+        public IActionResult QueryArticleCommentDetailInfo(ReqArticleCommentDetailInfo param)
+        {
+            var result = new ResponseBase<RespArticleCommentDetailInfo>();
+            try
+            {
+                var data = _service.QueryArticleCommentDetailInfo(param);//调用逻辑层
+                if (data != null) SetResultWhenSuccess<RespArticleCommentDetailInfo>(result, data);
+                else SetResultWhenFail<RespArticleCommentDetailInfo>(result, data);
+            }
+            catch (Exception e)
+            {
+                SetResultWhenError<RespArticleCommentDetailInfo>(result, e);
+            }
+
+            return new JsonResult(result);
+        }
 
 
-       
+
+
     }
 }
