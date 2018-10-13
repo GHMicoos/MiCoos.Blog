@@ -1,14 +1,4 @@
 
-.vs/config/applicationhost.config
-*.ide-wal
-*.ide-wal
-*.ide-shm
-.vs/MiCoos.Blog/DesignTimeBuild/.dtbcache
-*.pdb
 *.dll
 *.pdb
-*.dll
-*.ndm
-*.db
-.vs/MiCoos.Blog/DesignTimeBuild/.dtbcache
-.vs/MiCoos.Blog/DesignTimeBuild/.dtbcache
+*.cache
