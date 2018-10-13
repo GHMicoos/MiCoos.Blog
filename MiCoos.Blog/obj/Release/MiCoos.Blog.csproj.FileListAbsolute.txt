@@ -142,7 +142,6 @@ D:\Project\github\MiCoos.Blog\MiCoos.Blog\bin\zh-Hans\System.Web.Razor.resources
 D:\Project\github\MiCoos.Blog\MiCoos.Blog\bin\zh-Hans\System.Web.WebPages.resources.dll
 D:\Project\github\MiCoos.Blog\MiCoos.Blog\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\Project\github\MiCoos.Blog\MiCoos.Blog\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-D:\Project\github\MiCoos.Blog\MiCoos.Blog\obj\Release\MiCoos.Blog.csprojAssemblyReference.cache
 D:\Project\github\MiCoos.Blog\MiCoos.Blog\obj\Release\MiCoos.Blog.csproj.CoreCompileInputs.cache
 D:\Project\github\MiCoos.Blog\MiCoos.Blog\obj\Release\MiCoos.Blog.csproj.CopyComplete
 D:\Project\github\MiCoos.Blog\MiCoos.Blog\obj\Release\MiCoos.Blog.dll
