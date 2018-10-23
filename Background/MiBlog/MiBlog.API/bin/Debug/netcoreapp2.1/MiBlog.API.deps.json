@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "dd1bd7281396b9fefe38d0e9d0590ed286b72ba0"
+    "signature": "3654d398908114fcc855b17b60e2343ccbe4c96f"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,6 +12,7 @@
           "MiBlog.EF": "1.0.0",
           "MiBlog.Service": "1.0.0",
           "Microsoft.NETCore.App": "2.1.0",
+          "RestSharp": "106.5.4",
           "Swashbuckle.AspNetCore": "3.0.0"
         },
         "runtime": {
@@ -73,6 +74,14 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0"
+        }
+      },
+      "RestSharp/106.5.4": {
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {
+            "assemblyVersion": "106.5.4.0",
+            "fileVersion": "106.5.4.0"
+          }
         }
       },
       "Swashbuckle.AspNetCore/3.0.0": {
@@ -226,6 +235,13 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "RestSharp/106.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YaGn6olg2GD0gLy7YDG1FsSnC6TBwgn/zZSONiOj7hPFJJ0Q+k2hBogyalUXkodihVa0ugRwCqSPCiqdNyFKzA==",
+      "path": "restsharp/106.5.4",
+      "hashPath": "restsharp.106.5.4.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/3.0.0": {
       "type": "package",

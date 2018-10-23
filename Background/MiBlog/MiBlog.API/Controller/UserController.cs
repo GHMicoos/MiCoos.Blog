@@ -4,12 +4,17 @@ using MiBlog.Abstraction.ViewModel;
 using MiBlog.Abstraction.ViewModel.User;
 using MiBlog.Api;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MiBlog.API.Controller
 {
@@ -18,7 +23,7 @@ namespace MiBlog.API.Controller
     /// 博客管理
     /// </summary>
     [Route("[controller]")]
-    [EnableCors("AllowCors")]
+    //[EnableCors("AllowCors")]
     public class UserController : BasicController
     {
         private IUsreInfoService _service;
@@ -100,6 +105,72 @@ namespace MiBlog.API.Controller
                 var data = _service.UpdateUserInfo(param);
                 if (data) SetResultWhenSuccess<bool>(result, data);
                 else SetResultWhenFail<bool>(result, data);
+            }
+            catch (Exception e)
+            {
+                SetResultWhenError<bool>(result, e);
+            }
+
+            return new JsonResult(result);
+        }
+
+        /// <summary>
+        /// 上传头像
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("UploadProfilePicture")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<bool>))]
+        public IActionResult UploadProfilePicture(Guid userId, IFormFile file)
+        {
+            var result = new ResponseBase<bool>();
+            try
+            {
+                var saveRootPath = _config.GetSection("UploadPath:Image").Value;
+                var saveFileName =$"{DateTime.Now:yyyyMMddHHmmss}_{file.FileName}";
+                var savePath =$"{saveRootPath}\\{saveFileName}";
+
+                if (!Directory.Exists(saveRootPath))
+                {
+                    Directory.CreateDirectory(saveRootPath);
+                }
+                using (FileStream fs = new FileStream(savePath, FileMode.OpenOrCreate))
+                {
+                    file.CopyTo(fs);
+                    fs.Flush();
+                }
+
+                var url = _config.GetSection("TieTuKu:BaseUrl").Value;
+                var token = _config.GetSection("TieTuKu:Token").Value;
+
+                //var retData = new ResponseBase<RespHomePageReportData>();
+                var fileName = savePath.Split("\\").ToList().Last();
+                var client = new RestSharp.RestClient(url);
+                var request = new RestSharp.RestRequest("", RestSharp.Method.POST);
+                //request.AddHeader("accept", "application/json");
+                //request.AddHeader("Content-Type", "application/json-patch+json");
+                var param = new { Token = token };
+                request.AddParameter("Token", token);
+                request.AddFile("file", savePath);
+                RestSharp.IRestResponse response = client.Execute(request);
+                var content = response.Content;
+
+                if (content.Contains("code") && content.Contains("info"))
+                {
+                    var errorTieTuKu= JsonConvert.DeserializeObject<RespTieTuKuError>(content);
+                    SetResultWhenFail<bool>(result, false);
+                }
+                else
+                {
+                    var tieTuKu = JsonConvert.DeserializeObject<RespTieTuKu>(content);
+                    SetResultWhenSuccess<bool>(result, true);
+                }
+
+                var deleteFile = new FileInfo(savePath);
+                deleteFile.Delete();
+                
             }
             catch (Exception e)
             {

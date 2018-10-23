@@ -19,7 +19,7 @@ namespace MiBlog.API
     /// 博客管理
     /// </summary>
     [Route("[controller]")]
-    [EnableCors("AllowCors")]
+    //[EnableCors("AllowCors")]
     public class BlogController: BasicController
     {
         private IBlogService _service;

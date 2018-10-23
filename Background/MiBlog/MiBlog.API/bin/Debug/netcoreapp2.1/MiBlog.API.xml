@@ -106,5 +106,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:MiBlog.API.Controller.UserController.UploadProfilePicture(System.Guid,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传头像
+            </summary>
+            <param name="userId"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

@@ -667,6 +667,81 @@
             生日
             </summary>
         </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.User.RespTieTuKu">
+            <summary>
+            返回结果：贴图库上传文件后返回结果
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.width">
+            <summary>
+            图片的宽
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.height">
+            <summary>
+            图片的高
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.type">
+            <summary>
+            图片类型（文件后缀名）
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.size">
+            <summary>
+            图片大小(单位:字节)
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.ubburl">
+            <summary>
+            图片UBB引用代码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.linkurl">
+            <summary>
+            图片原图地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.htmlurl">
+            <summary>
+            图片HTML引用代码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.markdown">
+            <summary>
+            图片markdown引用代码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.s_url">
+            <summary>
+            图片展示图地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.t_url">
+            <summary>
+            图片缩略图地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.findurl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.User.RespTieTuKuError">
+            <summary>
+            返回结果：贴图库返回结果 异常
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKuError.code">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKuError.info">
+            <summary>
+            错误提示
+            </summary>
+        </member>
         <member name="T:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo">
             <summary>
             请求参数-查询用户信息
@@ -690,6 +765,16 @@
         <member name="P:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo.RegistTimeEnd">
             <summary>
             注册时间-结束
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.ReqUploadProfilePicture">
+            <summary>
+            请求参数：上传用户头像
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqUploadProfilePicture.UserId">
+            <summary>
+            用户id
             </summary>
         </member>
         <member name="T:MiBlog.Abstraction.ViewModel.RespUserInfo">

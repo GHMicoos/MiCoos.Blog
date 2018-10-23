@@ -3,6 +3,7 @@ using MiBlog.Abstraction.ViewModel.User;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MiBlog.Abstraction.Interface.Service
 {
@@ -31,5 +32,7 @@ namespace MiBlog.Abstraction.Interface.Service
         /// </summary>
         /// <returns></returns>
         bool UpdateUserInfo(ReqUpdateUserInfo param);
+
+        
     }
 }
