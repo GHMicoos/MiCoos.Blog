@@ -1,0 +1,29 @@
+{
+  "TieTuKu": {
+    "BaseUrl": "http://up.imgapi.com/",
+    "Token": "722b2e328fee6a031555a394e40f9fef54e2153a:7dPcriZ5F1BsFVW4wcVWr1dvZvA=:eyJkZWFkbGluZSI6MTU0MDE5NzI4OCwiYWN0aW9uIjoiZ2V0IiwidWlkIjoiNjY2MDQyIiwiYWlkIjoiMTUxMzAxNyIsImZyb20iOiJmaWxlIn0="
+  },
+  
+  "UploadPath": {
+    "Image": "D:\\0-leiling\\5-github\\MiCoos.Blog\\Background\\MiBlog\\StaticResource"
+
+  },
+  "section0": {
+    "key0": "value",
+    "key1": "value"
+  },
+  "section1": {
+    "key0": "value",
+    "key1": "value"
+  },
+  "section2": {
+    "subsection0": {
+      "key0": "value",
+      "key1": "value"
+    },
+    "subsection1": {
+      "key0": "value",
+      "key1": "value"
+    }
+  }
+}

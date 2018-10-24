@@ -4,13 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.IO;
+using System.Linq;
 
 namespace MiBlog.Api
 {
     /// <summary>
     /// 基础控制器
     /// </summary>
-    public class BasicController: Controller
+    public class BasicController : Controller
     {
         private IConfiguration _config;
         private IBaseService _baseService;
@@ -97,11 +99,11 @@ namespace MiBlog.Api
         /// <typeparam name="TData"></typeparam>
         /// <param name="result"></param>
         /// <param name="data"></param>
-        public void SetResultWhenFail<TData>(ResponseBase<TData> result, TData data)
+        public void SetResultWhenFail<TData>(ResponseBase<TData> result, TData data,string message="")
         {
             result.Status = ResponseStatus.Fail;
             result.Data = data;
-            result.Message = CommonConstValue.ResponseBase_Message_Fail;
+            result.Message = $"{CommonConstValue.ResponseBase_Message_Fail}{message}";
         }
 
         /// <summary>
@@ -116,6 +118,6 @@ namespace MiBlog.Api
             result.Data = default(TData);
             result.Message = CommonConstValue.ResponseBase_Message_Error + e.Message;
         }
-
+        
     }
 }

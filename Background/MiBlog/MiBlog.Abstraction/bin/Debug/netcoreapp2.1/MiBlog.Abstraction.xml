@@ -1,0 +1,1021 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiBlog.Abstraction</name>
+    </assembly>
+    <members>
+        <member name="M:MiBlog.Abstraction.AutoMapper.BlogProfile.#ctor">
+            <summary>
+            以下都是自定绑定的
+            string->Guid
+            int->Enum
+            int型->bool
+            不能自动绑定的
+            long->Datetime
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.CommonConstValue">
+            <summary>
+            静态字符串
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_Message_ParamError">
+            <summary>
+            请求响应基类-消息-参数错误
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_Message_Success">
+            <summary>
+            请求响应基类-消息-操作成功
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_Message_Fail">
+            <summary>
+            请求响应基类-消息-操作失败
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_Message_Error">
+            <summary>
+            请求响应基类-消息-操作错误
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonConstValue.ResponseBase_DefaultRecordCount">
+            <summary>
+            请求响应基类-返回记录总数-默认值
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonTool.LoginNameRegex">
+            <summary>
+            登录名 正则表达式字符串
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.CommonTool.GetLoginNameRegex">
+            <summary>
+            登录名 正则表达式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonTool.PasswordRegex">
+            <summary>
+            登录名 正则表达式字符串
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.CommonTool.GetPasswordRegex">
+            <summary>
+            登录密码 正则表达式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonTool.MobileRegex">
+            <summary>
+            登录名 正则表达式字符串
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.CommonTool.GetMobileRegex">
+            <summary>
+            手机号 正则表达式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.CommonTool.EmailRegex">
+            <summary>
+            登录名 正则表达式字符串
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.CommonTool.GetEmailRegex">
+            <summary>
+            邮箱 正则表达式
+            只允许英文字母、数字、下划线、英文句号、以及中划线组成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.DifineEnum.ArticleState">
+            <summary>
+            文章状态
+            枚举：0草稿，1发布，2删除
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.ArticleState.Draft">
+            <summary>
+            0草稿
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.ArticleState.Publish">
+            <summary>
+            1发布
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.ArticleState.Delete">
+            <summary>
+            2删除
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.DifineEnum.CommentState">
+            <summary>
+            评论状态
+            枚举：0正常的，1用户删除，2违法的或不合规的，3审核中
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.CommentState.Normal">
+            <summary>
+            0正常的
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.CommentState.UserDelted">
+            <summary>
+            1用户删除
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.CommentState.Illegal">
+            <summary>
+            2违法的或不合规的
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.CommentState.InReview">
+            <summary>
+            3审核中
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.DifineEnum.LoginInfoState">
+            <summary>
+            登录信息状态
+            枚举：0有效的，1禁用
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.LoginInfoState.Available">
+            <summary>
+            0有效的
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.LoginInfoState.Disabled">
+            <summary>
+            1禁用
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.DifineEnum.UserArticleRankType">
+            <summary>
+            用户(单个)文章排行类型
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.UserArticleRankType.Newest">
+            <summary>
+            最新榜单
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.UserArticleRankType.MostView">
+            <summary>
+            阅读榜
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.UserArticleRankType.MostComment">
+            <summary>
+            最多评论
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.ConvertToTimeStamp(System.DateTime)">
+            <summary>
+            DateTime 转 时间戳
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.ConvertToDateTime(System.Int64)">
+            <summary>
+            时间戳 转 Datetime
+            </summary>
+            <param name="timeStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.ConvertToDateTime(System.Nullable{System.Int64})">
+            <summary>
+            可null时间戳 转 Datetime
+            </summary>
+            <param name="timeStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsNull``1(``0)">
+            <summary>
+            判断对象是否为null
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsNullOrEmpty(System.String)">
+            <summary>
+            字符串判断 null 和 空字符串
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            字符串判断 null 空字符串 空白字符串
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsMobileNumber(System.String)">
+            <summary>
+            判断字符串 是否是手机号
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsMail(System.String)">
+            <summary>
+            判断字符串 邮箱
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsEmptyGuid(System.Nullable{System.Guid})">
+            <summary>
+            判断 是Empty guid
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsEmptyGuid(System.Guid)">
+            <summary>
+            判断 是Empty guid
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsNotEmptyGuid(System.Nullable{System.Guid})">
+            <summary>
+            判断 是Empty guid
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsNotEmptyGuid(System.Guid)">
+            <summary>
+            判断 是Empty guid
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsGuid(System.Nullable{System.Guid})">
+            <summary>
+            判断 guid
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsEnum``1(System.Nullable{``0})">
+            <summary>
+            判断枚举是否定义（可空类型）
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.IsEnum``1(``0)">
+            <summary>
+            判断枚举是否定义（可空类型）
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.GuidToLowerString(System.Guid)">
+            <summary>
+            Guid 变成 小写字符串
+            </summary>
+            <param name="_this"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.RequestBase">
+            <summary>
+            请求基类
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.RequestBase.IsPage">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.RequestBase.PageIndex">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.RequestBase.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.ResponseBase`1">
+            <summary>
+            请求响应类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MiBlog.Abstraction.Common.ResponseBase`1.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.ResponseBase`1.Status">
+            <summary>
+            响应状态
+            枚举：0失败，1成功，2错误
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.ResponseBase`1.Message">
+            <summary>
+            响应消息字符串
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.ResponseBase`1.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.Common.ResponseBase`1.RecordCount">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.Common.ResponseStatus">
+            <summary>
+            响应状态
+            枚举：0失败，1成功，2错误
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.ResponseStatus.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.ResponseStatus.Fail">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.ResponseStatus.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IBlogService.QueryArticleDetailInfo(System.Guid)">
+            <summary>
+            查询文章详细信息
+            </summary>
+            <param name="param">文章id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IBlogService.QueryArticleCommentDetailInfo(MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo)">
+            <summary>
+            查询文章评论信息
+            </summary>
+            <param name="param">文章id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IBlogService.QueryUserArticleRank(System.Guid)">
+            <summary>
+            查询用户的文章榜单 推荐/阅读/热评
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IBlogService.QueryUserArticleStatistic(System.Guid)">
+            <summary>
+            查询用户的文章统计
+            1.榜单
+            2.用户文章 分类统计
+            3.用户文章 标签统计
+            4.用户文章 时间统计
+            </summary>
+            <param name="param">文章id</param>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.Interface.Service.IUsreInfoService">
+            <summary>
+            逻辑层-用户信息
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IUsreInfoService.QueryUserInfo(MiBlog.Abstraction.ViewModel.ReqQueryUserInfo,System.Int32@)">
+            <summary>
+            查询用户信息
+            </summary>
+            <param name="param"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IUsreInfoService.RegistUser(MiBlog.Abstraction.ViewModel.User.ReqAddLoginInfo)">
+            <summary>
+            注册用户
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IUsreInfoService.UpdateUserInfo(MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo)">
+            <summary>
+            更新用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IBlogStore.QueryArticle">
+            <summary>
+            查询文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IBlogStore.QueryLabelArticle">
+            <summary>
+            查询 文章标签表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IBlogStore.QueryComment">
+            <summary>
+            查询 评论
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IBlogStore.QueryCategoryArticle">
+            <summary>
+            查询 文章分类表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.Interface.Store.IUserInfoStore">
+            <summary>
+            存储层-用户信息
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IUserInfoStore.QueryUserInfo">
+            <summary>
+            查询用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IUserInfoStore.AddUserInfo(MiBlog.EF.Models.TUserInfo)">
+            <summary>
+            添加用户信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IUserInfoStore.UpdateUserInfo(MiBlog.EF.Models.TUserInfo)">
+            <summary>
+            更新用户信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IUserInfoStore.AddLoginInfo(MiBlog.EF.Models.TLoginInfo)">
+            <summary>
+            添加登录信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IUserInfoStore.QueryLoginInfo">
+            <summary>
+            查询登录信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem">
+            <summary>
+            文章排行榜项
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem.#ctor(MiBlog.EF.Models.TArticle)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="article"></param>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem.BriefIntroduction">
+            <summary>
+            文章简介
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem.ArticleId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo">
+            <summary>
+            请求参数：查询文章评论详细信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo.ArticleId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo.TopHotCommnetCount">
+            <summary>
+            最热文章数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.ReqUserArticleList">
+            <summary>
+            请求参数：程序用户文章列表
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqUserArticleList.UserArticleRankType">
+            <summary>
+            用户文章排行类型
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqUserArticleList.LabelId">
+            <summary>
+            标签id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqUserArticleList.CategoryId">
+            <summary>
+            类型id
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespArticleCommentDetailInfo">
+            <summary>
+            返回结果-文章评论详细信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleCommentDetailInfo.TopHot">
+            <summary>
+            最新热评论
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleCommentDetailInfo.TopNew">
+            <summary>
+            最新评论
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleDetailInfo.ArticleInfo">
+            <summary>
+            文章信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleDetailInfo.AuthorInfo">
+            <summary>
+            作者详细信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleDetailInfo.LabelList">
+            <summary>
+            标签信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleDetailInfo.CommentCount">
+            <summary>
+            文章评论总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo">
+            <summary>
+            返回结果类-文章表
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo.ArticleId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo.Title">
+            <summary>
+            文章标题
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo.ContentText">
+            <summary>
+            文章内容
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo.Author">
+            <summary>
+            作者id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo.State">
+            <summary>
+            文章状态
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo.PublistTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespArticleList">
+            <summary>
+            返回结果：文章列表
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleList.ArticleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleList.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespComment">
+            <summary>
+            返回结果-文章评论
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.CommentId">
+            <summary>
+            评论id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.CommentText">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.ArticleId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.RootCommentId">
+            <summary>
+            根评论id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.FatherCommentId">
+            <summary>
+            父评论id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.Creator">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.State">
+            <summary>
+            评论状态
+            枚举：0正常的，1用户删除，2违法的或不合规的，3审核中
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.CreatorNavigation">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.FatherCommentCreator">
+            <summary>
+            父评论创建者
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespComment.ChildCommentList">
+            <summary>
+            子评论
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespLabel.LabelId">
+            <summary>
+            标签id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespLabel.Name">
+            <summary>
+            标签名字
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespLabel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespLabel.Creator">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespLabel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic">
+            <summary>
+            用户文章统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic.UserArticleRank">
+            <summary>
+            用户文章榜单
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic.UserArticleCategoryStatisticList">
+            <summary>
+            用户文章 分类统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic.UserArticleLabelStatisticList">
+            <summary>
+            用户文章 标签统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic.UserArticleDateStatisticList">
+            <summary>
+            用户文章 时间统计
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.UserArticleCategoryStatistic">
+            <summary>
+            用户文章分类统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleCategoryStatistic.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleCategoryStatistic.StatisticCount">
+            <summary>
+            统计总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.UserArticleDateStatistic">
+            <summary>
+            用户文章 时间统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleDateStatistic.DateName">
+            <summary>
+            时间名字
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleDateStatistic.StatisticCount">
+            <summary>
+            统计总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.UserArticleLabelStatistic">
+            <summary>
+            用户文章标签统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleLabelStatistic.LabelName">
+            <summary>
+            标签名字
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleLabelStatistic.StatisticCount">
+            <summary>
+            统计总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.UserArticleRank">
+            <summary>
+            返回结果：用户文章排行榜（推荐，阅读，热评）
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleRank.RecommendArticleList">
+            <summary>
+            推荐 榜单
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleRank.MostReadArticleList">
+            <summary>
+            最多阅读 榜单
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleRank.MostCommentArticleList">
+            <summary>
+            最多评论 榜单
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.User.ReqAddLoginInfo">
+            <summary>
+            请求参数-注册账号
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqAddLoginInfo.UserName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqAddLoginInfo.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo">
+            <summary>
+            请求参数-修改用户资料
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo.ProfilePicture">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.ReqUpdateUserInfo.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.User.RespTieTuKu">
+            <summary>
+            返回结果：贴图库上传文件后返回结果
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.width">
+            <summary>
+            图片的宽
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.height">
+            <summary>
+            图片的高
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.type">
+            <summary>
+            图片类型（文件后缀名）
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.size">
+            <summary>
+            图片大小(单位:字节)
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.ubburl">
+            <summary>
+            图片UBB引用代码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.linkurl">
+            <summary>
+            图片原图地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.htmlurl">
+            <summary>
+            图片HTML引用代码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.markdown">
+            <summary>
+            图片markdown引用代码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.s_url">
+            <summary>
+            图片展示图地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.t_url">
+            <summary>
+            图片缩略图地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKu.findurl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.User.RespTieTuKuError">
+            <summary>
+            返回结果：贴图库返回结果 异常
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKuError.code">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.User.RespTieTuKuError.info">
+            <summary>
+            错误提示
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo">
+            <summary>
+            请求参数-查询用户信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo.RegistTimeStart">
+            <summary>
+            注册时间-开始
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqQueryUserInfo.RegistTimeEnd">
+            <summary>
+            注册时间-结束
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.ReqUploadProfilePicture">
+            <summary>
+            请求参数：上传用户头像
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.ReqUploadProfilePicture.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.RespUserInfo">
+            <summary>
+            请求结果：用户信息
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespUserInfo.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespUserInfo.Name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespUserInfo.ProfilePicture">
+            <summary>
+            头像位置
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespUserInfo.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespUserInfo.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespUserInfo.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespUserInfo.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.RespUserInfo.RegistTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+    </members>
+</doc>
