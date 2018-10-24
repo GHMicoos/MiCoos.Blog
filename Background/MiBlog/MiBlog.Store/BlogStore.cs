@@ -40,5 +40,12 @@ namespace MiBlog.Store
         /// <returns></returns>
         public IQueryable<TComment> QueryComment()
             => _dbContext.TComment.AsNoTracking();
+
+        /// <summary>
+        /// 查询 文章分类表
+        /// </summary>
+        /// <returns></returns>
+        public IQueryable<TCategoryArticle> QueryCategoryArticle()
+            => _dbContext.TCategoryArticle.AsNoTracking();
     }
 }

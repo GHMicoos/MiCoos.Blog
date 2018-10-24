@@ -41,7 +41,7 @@
             <param name="result"></param>
             <param name="data"></param>
         </member>
-        <member name="M:MiBlog.Api.BasicController.SetResultWhenFail``1(MiBlog.Abstraction.Common.ResponseBase{``0},``0)">
+        <member name="M:MiBlog.Api.BasicController.SetResultWhenFail``1(MiBlog.Abstraction.Common.ResponseBase{``0},``0,System.String)">
             <summary>
             设置结果对象，当失败
             </summary>
@@ -72,6 +72,24 @@
         <member name="M:MiBlog.API.BlogController.QueryArticleCommentDetailInfo(MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo)">
             <summary>
             查询文章评论信息
+            </summary>
+            <param name="param">文章id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.API.BlogController.QueryUserArticleRank(System.Guid)">
+            <summary>
+            查询用户的文章榜单 推荐/阅读/热评
+            </summary>
+            <param name="param">文章id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.API.BlogController.QueryUserArticleStatistic(System.Guid)">
+            <summary>
+            查询用户的文章统计
+            1.榜单
+            2.用户文章 分类统计
+            3.用户文章 标签统计
+            4.用户文章 时间统计
             </summary>
             <param name="param">文章id</param>
             <returns></returns>

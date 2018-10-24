@@ -22,7 +22,7 @@ namespace MiBlog.Abstraction.ViewModel.User
         /// <summary>
         /// 图片类型（文件后缀名）
         /// </summary>
-        public int type { get; set; }
+        public string type { get; set; }
 
         /// <summary>
         /// 图片大小(单位:字节)
@@ -32,36 +32,36 @@ namespace MiBlog.Abstraction.ViewModel.User
         /// <summary>
         /// 图片UBB引用代码
         /// </summary>
-        public int ubburl { get; set; }
+        public string ubburl { get; set; }
 
         /// <summary>
         /// 图片原图地址
         /// </summary>
-        public int linkurl { get; set; }
+        public string linkurl { get; set; }
 
         /// <summary>
         /// 图片HTML引用代码
         /// </summary>
-        public int htmlurl { get; set; }
+        public string htmlurl { get; set; }
 
         /// <summary>
         /// 图片markdown引用代码
         /// </summary>
-        public int markdown { get; set; }
+        public string markdown { get; set; }
 
         /// <summary>
         /// 图片展示图地址
         /// </summary>
-        public int s_url { get; set; }
+        public string s_url { get; set; }
 
         /// <summary>
         /// 图片缩略图地址
         /// </summary>
-        public int t_url { get; set; }
+        public string t_url { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public int findurl { get; set; }
+        public string findurl { get; set; }
     }
 }

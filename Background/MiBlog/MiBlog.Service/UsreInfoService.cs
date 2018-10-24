@@ -100,10 +100,12 @@ namespace MiBlog.Service
             if (!param.ProfilePicture.IsNullOrWhiteSpace()) old.ProfilePicture = param.ProfilePicture;
             if (!param.Address.IsNullOrWhiteSpace()) old.Address = param.Address;
             if (param.Mobile.IsMobileNumber()) old.Name = param.Name;
-            if (!param.Email.IsMail()) old.Email = param.Email;
-            if (!param.Birthday.HasValue) old.Birthday = param.Birthday.Value.ConvertToTimeStamp();
+            if (param.Email.IsMail()) old.Email = param.Email;
+            if (param.Birthday.HasValue) old.Birthday = param.Birthday.Value.ConvertToTimeStamp();
 
             return _store.UpdateUserInfo(old);
         }
+
+        
     }
 }

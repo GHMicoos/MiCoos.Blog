@@ -26,5 +26,13 @@ namespace MiBlog.Abstraction.Interface.Store
         /// </summary>
         /// <returns></returns>
         IQueryable<TComment> QueryComment();
+
+        /// <summary>
+        /// 查询 文章分类表
+        /// </summary>
+        /// <returns></returns>
+        IQueryable<TCategoryArticle> QueryCategoryArticle();
+
+        
     }
 }

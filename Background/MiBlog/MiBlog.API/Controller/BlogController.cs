@@ -79,8 +79,85 @@ namespace MiBlog.API
             return new JsonResult(result);
         }
 
+        /// <summary>
+        /// 查询用户的文章榜单 推荐/阅读/热评
+        /// </summary>
+        /// <param name="param">文章id</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("QueryUserArticleRank")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<UserArticleRank>))]
+        public IActionResult QueryUserArticleRank(Guid param)
+        {
+            var result = new ResponseBase<UserArticleRank>();
+            try
+            {
+                var data = _service.QueryUserArticleRank(param);//调用逻辑层
+                if (data != null) SetResultWhenSuccess<UserArticleRank>(result, data);
+                else SetResultWhenFail<UserArticleRank>(result, data);
+            }
+            catch (Exception e)
+            {
+                SetResultWhenError<UserArticleRank>(result, e);
+            }
+
+            return new JsonResult(result);
+        }
+
+        /// <summary>
+        /// 查询用户的文章统计
+        /// 1.榜单
+        /// 2.用户文章 分类统计
+        /// 3.用户文章 标签统计
+        /// 4.用户文章 时间统计
+        /// </summary>
+        /// <param name="param">文章id</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("QueryUserArticleRank")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<RespUserArticleStatistic>))]
+        public IActionResult QueryUserArticleStatistic(Guid param)
+        {
+            var result = new ResponseBase<RespUserArticleStatistic>();
+            try
+            {
+                var data = _service.QueryUserArticleStatistic(param);//调用逻辑层
+                if (data != null) SetResultWhenSuccess<RespUserArticleStatistic>(result, data);
+                else SetResultWhenFail<RespUserArticleStatistic>(result, data);
+            }
+            catch (Exception e)
+            {
+                SetResultWhenError<RespUserArticleStatistic>(result, e);
+            }
+
+            return new JsonResult(result);
+        }
 
 
+        /// <summary>
+        /// 查询用户的文章列表
+        /// </summary>
+        /// <param name="param">文章id</param>
+        /// <returns></returns>
+        //[HttpGet]
+        //[Route("QueryUserArticleRank")]
+        //[ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<RespUserArticleStatistic>))]
+        //public IActionResult QueryUserArticleList(ReqUserArticleList param)
+        //{
+        //    var result = new ResponseBase<RespUserArticleStatistic>();
+        //    try
+        //    {
+        //        var data = _service.QueryUserArticleList(param);//调用逻辑层
+        //        if (data != null) SetResultWhenSuccess<RespUserArticleStatistic>(result, data);
+        //        else SetResultWhenFail<RespUserArticleStatistic>(result, data);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        SetResultWhenError<RespUserArticleStatistic>(result, e);
+        //    }
+
+        //    return new JsonResult(result);
+        //}
 
     }
 }

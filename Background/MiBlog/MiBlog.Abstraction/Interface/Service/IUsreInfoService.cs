@@ -32,7 +32,6 @@ namespace MiBlog.Abstraction.Interface.Service
         /// </summary>
         /// <returns></returns>
         bool UpdateUserInfo(ReqUpdateUserInfo param);
-
         
     }
 }

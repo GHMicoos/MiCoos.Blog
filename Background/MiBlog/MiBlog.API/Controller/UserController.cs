@@ -159,13 +159,21 @@ namespace MiBlog.API.Controller
 
                 if (content.Contains("code") && content.Contains("info"))
                 {
-                    var errorTieTuKu= JsonConvert.DeserializeObject<RespTieTuKuError>(content);
-                    SetResultWhenFail<bool>(result, false);
+                    var errorTieTuKu = JsonConvert.DeserializeObject<RespTieTuKuError>(content);
+                    SetResultWhenFail<bool>(result, false,$"{errorTieTuKu.code},{errorTieTuKu.info}");
                 }
                 else
                 {
                     var tieTuKu = JsonConvert.DeserializeObject<RespTieTuKu>(content);
-                    SetResultWhenSuccess<bool>(result, true);
+                    if(tieTuKu==null || tieTuKu.linkurl.IsNullOrWhiteSpace())
+                        SetResultWhenFail<bool>(result, false);
+                    var saveResult=_service.UpdateUserInfo(new ReqUpdateUserInfo()
+                    {
+                        UserId = userId,
+                        ProfilePicture = tieTuKu.linkurl,
+                    });
+                    if(saveResult) SetResultWhenSuccess<bool>(result, true);
+                    else SetResultWhenFail<bool>(result, false);
                 }
 
                 var deleteFile = new FileInfo(savePath);

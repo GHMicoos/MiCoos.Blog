@@ -152,6 +152,26 @@
             1禁用
             </summary>
         </member>
+        <member name="T:MiBlog.Abstraction.Common.DifineEnum.UserArticleRankType">
+            <summary>
+            用户(单个)文章排行类型
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.UserArticleRankType.Newest">
+            <summary>
+            最新榜单
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.UserArticleRankType.MostView">
+            <summary>
+            阅读榜
+            </summary>
+        </member>
+        <member name="F:MiBlog.Abstraction.Common.DifineEnum.UserArticleRankType.MostComment">
+            <summary>
+            最多评论
+            </summary>
+        </member>
         <member name="M:MiBlog.Abstraction.Common.ExtensionMethod.ConvertToTimeStamp(System.DateTime)">
             <summary>
             DateTime 转 时间戳
@@ -354,6 +374,24 @@
             <param name="param">文章id</param>
             <returns></returns>
         </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IBlogService.QueryUserArticleRank(System.Guid)">
+            <summary>
+            查询用户的文章榜单 推荐/阅读/热评
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiBlog.Abstraction.Interface.Service.IBlogService.QueryUserArticleStatistic(System.Guid)">
+            <summary>
+            查询用户的文章统计
+            1.榜单
+            2.用户文章 分类统计
+            3.用户文章 标签统计
+            4.用户文章 时间统计
+            </summary>
+            <param name="param">文章id</param>
+            <returns></returns>
+        </member>
         <member name="T:MiBlog.Abstraction.Interface.Service.IUsreInfoService">
             <summary>
             逻辑层-用户信息
@@ -398,6 +436,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:MiBlog.Abstraction.Interface.Store.IBlogStore.QueryCategoryArticle">
+            <summary>
+            查询 文章分类表
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:MiBlog.Abstraction.Interface.Store.IUserInfoStore">
             <summary>
             存储层-用户信息
@@ -436,6 +480,32 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem">
+            <summary>
+            文章排行榜项
+            </summary>
+        </member>
+        <member name="M:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem.#ctor(MiBlog.EF.Models.TArticle)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="article"></param>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem.BriefIntroduction">
+            <summary>
+            文章简介
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ArticleRankItem.ArticleId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
         <member name="T:MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo">
             <summary>
             请求参数：查询文章评论详细信息
@@ -449,6 +519,26 @@
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqArticleCommentDetailInfo.TopHotCommnetCount">
             <summary>
             最热文章数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.ReqUserArticleList">
+            <summary>
+            请求参数：程序用户文章列表
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqUserArticleList.UserArticleRankType">
+            <summary>
+            用户文章排行类型
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqUserArticleList.LabelId">
+            <summary>
+            标签id
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.ReqUserArticleList.CategoryId">
+            <summary>
+            类型id
             </summary>
         </member>
         <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespArticleCommentDetailInfo">
@@ -524,6 +614,21 @@
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleInfo.PublistTime">
             <summary>
             发布时间
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespArticleList">
+            <summary>
+            返回结果：文章列表
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleList.ArticleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespArticleList.Title">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespComment">
@@ -610,6 +715,96 @@
         <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespLabel.CreateTime">
             <summary>
             创建时间
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic">
+            <summary>
+            用户文章统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic.UserArticleRank">
+            <summary>
+            用户文章榜单
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic.UserArticleCategoryStatisticList">
+            <summary>
+            用户文章 分类统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic.UserArticleLabelStatisticList">
+            <summary>
+            用户文章 标签统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.RespUserArticleStatistic.UserArticleDateStatisticList">
+            <summary>
+            用户文章 时间统计
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.UserArticleCategoryStatistic">
+            <summary>
+            用户文章分类统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleCategoryStatistic.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleCategoryStatistic.StatisticCount">
+            <summary>
+            统计总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.UserArticleDateStatistic">
+            <summary>
+            用户文章 时间统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleDateStatistic.DateName">
+            <summary>
+            时间名字
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleDateStatistic.StatisticCount">
+            <summary>
+            统计总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.UserArticleLabelStatistic">
+            <summary>
+            用户文章标签统计
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleLabelStatistic.LabelName">
+            <summary>
+            标签名字
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleLabelStatistic.StatisticCount">
+            <summary>
+            统计总数
+            </summary>
+        </member>
+        <member name="T:MiBlog.Abstraction.ViewModel.Blog.UserArticleRank">
+            <summary>
+            返回结果：用户文章排行榜（推荐，阅读，热评）
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleRank.RecommendArticleList">
+            <summary>
+            推荐 榜单
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleRank.MostReadArticleList">
+            <summary>
+            最多阅读 榜单
+            </summary>
+        </member>
+        <member name="P:MiBlog.Abstraction.ViewModel.Blog.UserArticleRank.MostCommentArticleList">
+            <summary>
+            最多评论 榜单
             </summary>
         </member>
         <member name="T:MiBlog.Abstraction.ViewModel.User.ReqAddLoginInfo">
