@@ -2,13 +2,18 @@
 using MiBlog.Abstraction.Interface.Service;
 using MiBlog.Abstraction.ViewModel;
 using MiBlog.Abstraction.ViewModel.Blog;
+using MiBlog.Abstraction.ViewModel.User;
 using MiBlog.Api;
 using MiBlog.EF.Models;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using static MiBlog.Abstraction.AutoMapper.BlogProfile;
@@ -23,10 +28,12 @@ namespace MiBlog.API
     public class BlogController: BasicController
     {
         private IBlogService _service;
+        private IConfiguration _config;
 
         public BlogController(IBlogService service, IConfiguration config) : base(config, service)
         {
             _service = service;
+            _config = config;
         }
 
         /// <summary>
@@ -114,7 +121,7 @@ namespace MiBlog.API
         /// <param name="param">文章id</param>
         /// <returns></returns>
         [HttpGet]
-        [Route("QueryUserArticleRank")]
+        [Route("QueryUserArticleStatistic")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<RespUserArticleStatistic>))]
         public IActionResult QueryUserArticleStatistic(Guid param)
         {
@@ -133,6 +140,73 @@ namespace MiBlog.API
             return new JsonResult(result);
         }
 
+        /// <summary>
+        /// 上传图片
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("UploadPicture")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(string))]
+        public IActionResult UploadPicture(IFormFile file)
+        {
+            var result = new ResponseBase<string>();
+            try
+            {
+                var saveRootPath = _config.GetSection("UploadPath:Image").Value;
+                var saveFileName = $"{DateTime.Now:yyyyMMddHHmmss}_{file.FileName}";
+                var savePath = $"{saveRootPath}\\{saveFileName}";
+
+                if (!Directory.Exists(saveRootPath))
+                {
+                    Directory.CreateDirectory(saveRootPath);
+                }
+                using (FileStream fs = new FileStream(savePath, FileMode.OpenOrCreate))
+                {
+                    file.CopyTo(fs);
+                    fs.Flush();
+                }
+
+                var url = _config.GetSection("TieTuKu:BaseUrl").Value;
+                var token = _config.GetSection("TieTuKu:Token").Value;
+
+                //var retData = new ResponseBase<RespHomePageReportData>();
+                var fileName = savePath.Split("\\").ToList().Last();
+                var client = new RestSharp.RestClient(url);
+                var request = new RestSharp.RestRequest("", RestSharp.Method.POST);
+                //request.AddHeader("accept", "application/json");
+                //request.AddHeader("Content-Type", "application/json-patch+json");
+                var param = new { Token = token };
+                request.AddParameter("Token", token);
+                request.AddFile("file", savePath);
+                RestSharp.IRestResponse response = client.Execute(request);
+                var content = response.Content;
+
+                if (content.Contains("code") && content.Contains("info"))
+                {
+                    var errorTieTuKu = JsonConvert.DeserializeObject<RespTieTuKuError>(content);
+                    SetResultWhenFail<string>(result, string.Empty, $"{errorTieTuKu.code},{errorTieTuKu.info}");
+                }
+                else
+                {
+                    var tieTuKu = JsonConvert.DeserializeObject<RespTieTuKu>(content);
+                    if (tieTuKu == null || tieTuKu.linkurl.IsNullOrWhiteSpace())
+                        SetResultWhenFail<string>(result, tieTuKu.linkurl);
+                    else
+                        SetResultWhenSuccess<string>(result, tieTuKu.linkurl);
+                }
+
+                var deleteFile = new FileInfo(savePath);
+                deleteFile.Delete();
+
+            }
+            catch (Exception e)
+            {
+                SetResultWhenError<string>(result, e);
+            }
+
+            return new JsonResult(new { result.Data });
+        }
 
         /// <summary>
         /// 查询用户的文章列表
@@ -157,7 +231,7 @@ namespace MiBlog.API
         //    }
 
         //    return new JsonResult(result);
-        //}
+        //    }
 
     }
 }
