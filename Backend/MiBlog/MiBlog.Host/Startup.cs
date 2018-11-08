@@ -41,9 +41,17 @@ namespace MiBlog
 
             });
 
-            //var corsOrigins = Configuration["CorsOrigins"].Split(",", StringSplitOptions.RemoveEmptyEntries).ToArray();
-            //添加cors 服务
-            //services.AddCors(options => options.AddPolicy("AllowCors", bulider => bulider.WithOrigins(corsOrigins).AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin().AllowCredentials()));
+            // 配置跨域处理
+            services.AddCors(options =>
+            {
+                options.AddPolicy("any", builder =>
+                {
+                    builder.AllowAnyOrigin() //允许任何来源的主机访问
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();//指定处理cookie
+                });
+            });
 
             services.AddMvc();
 
@@ -71,7 +79,8 @@ namespace MiBlog
 
             app.UseStaticFiles();
             app.UseMvc();
-            app.UseCors("AllowCors");
+            app.UseCors("any");
+            //app.UseCors("AllowCors");
 
             app.UseSwagger().UseSwaggerUI(c =>
             {

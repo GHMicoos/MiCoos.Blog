@@ -13,6 +13,8 @@ namespace MiBlog.Service
             service.AddTransient<IBaseService, BaseService>();
             service.AddTransient<IBlogService, BlogService>();
             service.AddTransient<IUsreInfoService, UsreInfoService>();
+            service.AddTransient<ILabelService, LabelService>();
+            service.AddTransient<ICategoryService, CategoryService>();
 
             return service;
         }

@@ -53,5 +53,7 @@ namespace MiBlog.Abstraction.Common
         /// <returns></returns>
         public static Regex GetEmailRegex()
             => new Regex(@"^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$");
+
+        public static string Lieling = "bae294ef-61f2-4e2a-bf30-01da63bd7fd7";
     }
 }

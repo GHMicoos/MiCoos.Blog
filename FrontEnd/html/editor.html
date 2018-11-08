@@ -69,8 +69,26 @@
 </head>
 
 <body>
-    <!-- Static navbar -->
-    <nav class="navbar navbar-inverse  navbar-static-top">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span><span class="modal-title">消息<span>
+                </div>
+                <div class="modal-body">
+                    <span class="modal-message" style="margin-left: 40px;"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--导航栏开始-->
+    <nav class="navbar navbar-inverse  navbar-static-top navbarclass">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -80,66 +98,109 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Blog Name</a>
+                <a class="navbar-brand" href="#" style="font-weight:bold;margin-right:10px;">丢小七的博客</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav navbar-nav navclass">
+                    <li class="active"><a href="#">我的主页</a></li>
+                    <li><a href="#about">统计</a></li>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#contact">联系</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li><a href="../navbar/">Default</a></li>
+                        <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+                        <li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle navrightclass" data-toggle="dropdown" role="button"
+                            aria-expanded="false">
+                            <span class="glyphicon glyphicon-cog navicon"></span>
+                            <!--<span class="caret"></span>-->
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">文章</a></li>
+                            <li><a href="#">评论</a></li>
                             <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
+                            <li class="dropdown-header">博客展示设置</li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">个人信息设置</a></li>
                             <li><a href="#">Separated link</a></li>
                             <li><a href="#">One more separated link</a></li>
                         </ul>
                     </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../navbar/">Default</a></li>
-                    <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-                    <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navrightclass" data-toggle="dropdown" role="button"
+                            aria-expanded="false">
+                            <span class="glyphicon glyphicon-envelope navicon"></span> <span class="badge" style="margin-top: -25px;background-color:#f3565d;    margin-right: -9px;">100</span>
+                        </a>
+                        <ul class="dropdown-menu notifications">
+                            <li class="header">
+                                <strong>You have 7 new notifications</strong>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-flag text-danger"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline">
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to
+                                                engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-comment text-info"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline">
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to
+                                                engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="message">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <span class="glyphicon glyphicon-flag text-success"></span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#" class="breakcontent nounderline">
+                                            <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to
+                                                engage potential customers.</p>
+                                            <span class="timestamp">24 minutes ago</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
     </nav>
-    <section class="banner-section"></section>
+    <!--导航栏结束-->
+
     <section class="post-content-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 post-title-block">
-
-                    <h1 class="text-center">post Title goes here</h1>
-                    <ul class="list-inline text-center">
-                        <li>Author |</li>
-                        <li>Category |</li>
-                        <li>Date |</li>
-                    </ul>
-                </div>
-                <div class="col-lg-3  col-md-3 col-sm-12">
-                    <div class="well">
-                        <h2>Subscription Box</h2>
-                        <p>Form Description Goes here</p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">Go!</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-9 col-md-12 col-sm-12" style="padding-bottom:0px;">
+                <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom:0px;">
                     <div class="input-group input-group-lg col-4" style="padding-bottom:20px;">
                         <span class="input-group-addon" id="basic-addon1" style="font-weight:bold;">文章标题</span>
-                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1"
+                        <input id="articelTitle" type="text" class="form-control" placeholder="XXXX" aria-describedby="basic-addon1"
                             style="font-weight:bold;">
 
                     </div>
@@ -147,35 +208,31 @@
                     <div class="summernote">
 
                     </div>
-                </div>
-                <div class=" col-lg-9 col-lg-offset-3 col-md-12 col-sm-12">
-                    <div class="panel panel-default">
+
+                    <div id="catagoryDiv" class="panel panel-default">
                         <div class="panel-heading">选择分类</div>
-                        <div class="panel-body" style="display:inline-block">
-                            <div class="col-lg-2 col-md-2 col-xs-4">
-                                <div class="input-group mcraido mcraidoactive " group="001">
-                                    <span class="input-group-addon mcraido-tick" id="basic-addon1"><span class="glyphicon glyphicon-ok"></span></span>
-                                    <button class="btn btn-default mcraido-button" type="submit" style="">Button</button>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-xs-8" style="margin-bottom:20px;">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search for...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default addlabelbtn" labelpanel="categorypaenl" type="button">添加分类</button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-xs-4">
-                                <div class="input-group mcraido mcraidoactive" group="001">
-                                    <span class="input-group-addon mcraido-tick" id="basic-addon2"><span class="glyphicon glyphicon-ok"></span></span>
-                                    <button class="btn btn-default mcraido-button" type="submit" style="">Button</button>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-xs-4">
-                                <div class="input-group mcraido mcraidoactive" group="001">
-                                    <span class="input-group-addon mcraido-tick" id="basic-addon3"><span class="glyphicon glyphicon-ok"></span></span>
-                                    <button class="btn btn-default mcraido-button" type="submit" style="">Button</button>
-                                </div>
+                            <div id="categorypaenl" style="display:inline-block">
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
+                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
+                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
+                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
 
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class=" col-lg-9 col-lg-offset-3 col-md-12 col-sm-12" style="padding-bottom:10px;">
-                    <div class="panel panel-default">
+
+                    <div id="labelDiv" class="panel panel-default">
                         <div class="panel-heading">选择标签</div>
                         <div class="panel-body">
                             <div class="row">
@@ -183,19 +240,18 @@
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Search for...">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-default addlabelbtn" labelpanel="checklabelpaenl"
-                                                type="button">添加标签</button>
+                                            <button class="btn btn-default addlabelbtn" labelpanel="labelpaenl" type="button">添加标签</button>
                                         </span>
                                     </div>
                                 </div>
                                 <!--<div class="col-lg-12">
-                                        <button class="btn btn-info" onclick="info('Your info is saved properly.')">Info</button>
-                                        <button class="btn btn-warning" onclick="warning('Are you sure ?')">Warning</button>
-                                        <button class="btn btn-danger" onclick="error('Unknown error occurred.')">Error</button>
-                                        <button class="btn btn-success" onclick="success('All Saved.')">Success</button>
-                                    </div>-->
+                                    <button class="btn btn-info" onclick="info('Your info is saved properly.')">Info</button>
+                                    <button class="btn btn-warning" onclick="warning('Are you sure ?')">Warning</button>
+                                    <button class="btn btn-danger" onclick="error('Unknown error occurred.')">Error</button>
+                                    <button class="btn btn-success" onclick="success('All Saved.')">Success</button>
+                                </div>-->
                             </div>
-                            <div id="checklabelpaenl" style="display:inline-block">
+                            <div id="labelpaenl" style="display:inline-block">
                                 <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
                                             class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
                                 <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
@@ -204,62 +260,29 @@
                                             class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
                                 <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
                                             class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-                                <div style="display:inline-block"><span class="label label-default checklabel cl-checked">bootstrap<span
-                                            class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>
-
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-9 col-lg-offset-3 col-md-12 col-sm-12" style="margin-bottom:20px;margin-top:20px;text-align:center;">
+                <div class="col-lg-12  col-md-12 col-sm-12" style="margin-bottom:20px;margin-top:20px;text-align:center;">
                     <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn btn-danger " style="margin-left:20px;margin-right:20px;">取 消</button>
+                    <button type="button" class="btn btn-danger " style="margin-left:20px;margin-right:20px;">不保存</button>
 
                     <!-- Indicates caution should be taken with this action -->
-                    <button type="button" class="btn btn-info " style="margin-left:20px;margin-right:20px;">存草稿</button>
+                    <button type="button" class="btn btn-info " style="margin-left:20px;margin-right:20px;">存入草稿</button>
 
                     <!-- Indicates a dangerous or potentially negative action -->
-                    <button type="button" class="btn btn-success " style="margin-left:20px;margin-right:20px;">发 布</button>
+                    <button id="publishArticleBtn" type="button" class="btn btn-success " style="margin-left:20px;margin-right:20px;">发布文章</button>
                 </div>
 
             </div>
 
         </div> <!-- /container -->
     </section>
-    <section class="footer-link"><a href="http://bootsnipp.com/grafreez" target="_blank">View Our All Snnips</a></section>
+    <section class="footer-link">
+        <a href="http://bootsnipp.com/grafreez" target="_blank">By micoos</a>
+    </section>
 
     <script src="../js/jquery/jquery-3.2.1.js"></script>
     <script src="../components/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
@@ -267,93 +290,40 @@
     <script src="../components/assets/vendor/summernote/summernote.min.js"></script>
     <script src="../js/url.js"></script>
     <script>
-        window.error = function (msg) {
-            var dom = '<div class="top-alert"><div class="alert alert-danger alert-dismissible fade in " role="alert"><i class="glyphicon glyphicon-exclamation-sign"></i> ' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div></div>';
-            var jdom = $(dom);
-            try {
-                var top = $('.top-alert:last').css('top').replace('px', '');
-                var topint = parseInt(top) + 50;
-                jdom.css('top', topint.toString() + 'px');
-            }
-            catch (e) { }
-            jdom.hide();
-            $("body").append(jdom);
-            jdom.fadeIn();
-            setTimeout(function () {
-                jdom.fadeOut(function () {
-                    jdom.remove();
-                });
-            }, 6000);
-        }
-        window.warning = function (msg) {
-            var dom = '<div class="top-alert"><div class="alert alert-warning alert-dismissible fade in " role="alert"><i class="glyphicon glyphicon-question-sign"></i> ' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div></div>';
-            var jdom = $(dom);
-            try {
-                var top = $('.top-alert:last').css('top').replace('px', '');
-                var topint = parseInt(top) + 50;
-                jdom.css('top', topint.toString() + 'px');
-            }
-            catch (e) { }
-            jdom.hide();
-            $("body").append(jdom);
-            jdom.fadeIn();
-            setTimeout(function () {
-                jdom.fadeOut(function () {
-                    jdom.remove();
-                });
-            }, 6000);
-        }
-        window.info = function (msg) {
-            var dom = '<div class="top-alert"><div class="alert alert-info alert-dismissible fade in " role="alert"><i class="glyphicon glyphicon-info-sign"></i> ' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div></div>';
-            var jdom = $(dom);
-            try {
-                var top = $('.top-alert:last').css('top').replace('px', '');
-                var topint = parseInt(top) + 50;
-                jdom.css('top', topint.toString() + 'px');
-            }
-            catch (e) { }
-            jdom.hide();
-            $("body").append(jdom);
-            jdom.fadeIn();
-            setTimeout(function () {
-                jdom.fadeOut(function () {
-                    jdom.remove();
-                });
-            }, 6000);
-        }
-        window.success = function (msg) {
-            var dom = '<div class="top-alert"><div class="alert alert-success alert-dismissible fade in " role="alert"><i class="glyphicon glyphicon-ok"></i> ' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></div></div>';
-            var jdom = $(dom);
-            try {
-                var top = $('.top-alert:last').css('top').replace('px', '');
-                var topint = parseInt(top) + 50;
-                jdom.css('top', topint.toString() + 'px');
-            }
-            catch (e) { }
-            jdom.hide();
-            $("body").append(jdom);
-            jdom.fadeIn();
-            setTimeout(function () {
-                jdom.fadeOut(function () {
-                    jdom.remove();
-                });
-            }, 6000);
-        }
+
+
 
 
         $(function () {
-            $('div.mcraido button').click(function () {
-                var parent = $($(this).parent('div.mcraido:first')[0]);
-                var group = parent.attr('group');
-                var groupBtn = $('div.mcraido[group="' + group + '"]');
-                groupBtn.each(function () {
-                    if (!$(this).find('div.input-group').hasClass('mcraidoactive')) {
-                        $(this).removeClass('mcraidoactive');
-                    }
-                });
-                var has = parent.toggleClass('mcraidoactive');
+            var _codeForNotice = 0;//1成功，2提示，3错误
+            var _modalTitle = "";
+            var _modalMessage = "";//提示信息
+
+            var noticeModal = function (codeForNotice, message) {
+                if (codeForNotice === 1) _modalTitle = "成功";
+                else if (codeForNotice === 2) _modalTitle = "提示";
+                else if (codeForNotice === 3) _modalTitle = "错误";
+
+                _modalMessage = message;
+
+                $('#exampleModal').modal({
+                    keyboard: true
+                })
+            };
 
 
+            $('#exampleModal').on('show.bs.modal', function (event) {
+                // var button = $(event.relatedTarget) // Button that triggered the modal
+                // var recipient = button.data('whatever') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this)
+                modal.find('.modal-title').text(_modalTitle)
+                modal.find('.modal-body .modal-message').text(_modalMessage)
+            })
+
+            $('#publishArticleBtn').click(function () {
+                noticeModal(1, "成功");
             });
 
             /*选择标签相关*/
@@ -365,7 +335,9 @@
             });
 
 
-            $('.addlabelbtn').click(function () {
+            $('#labelDiv .addlabelbtn,#catagoryDiv .addlabelbtn').click(function () {
+                var classType = $(this).parents('#labelDiv').length > 0 ? 1 : 2;//1标签，2分类
+
                 var newLabelString = $(this).parents('.input-group:first').find('input[type="text"]:first').get(0).value;
                 var panel = $("#" + $(this).attr('labelpanel'));
                 var labels = panel.find('span.checklabel');
@@ -381,20 +353,58 @@
 
                 });
                 if (!has && newLabelString) {
-                    var html = [];
-                    html.push('<div style="display:inline-block"><span class="label label-default checklabel">');
-                    html.push(newLabelString);
-                    html.push('<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>');
-                    panel.append(html.join('').toString());
-                    $('.checklabel:last').click(function () {
-                        $(this).toggleClass('cl-checked');
+                    var url = '';
+                    if (classType == 1) url = Url.Base + 'Label/AddLabel';
+                    else if (classType == 2) url = Url.Base + 'Category/AddCategory';
+                    
+                    //var data = { name: newLabelString };
+                    $.ajax({
+                        url: url,
+                        type: 'POST',
+                        dataType: 'json',
+                        data: JSON.stringify({ "name": newLabelString }),
+                        contentType: "application/json;charset-UTF-8",
+                        success: function (data, textStatus, xhr) {
+                            var html = [];
+                            html.push('<div style="display:inline-block"><span class="label label-default checklabel">');
+                            html.push(newLabelString);
+                            html.push('<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>');
+                            panel.append(html.join('').toString());
+                            $(panel).parents('.panel-body').find('.checklabel:last').click(function () {
+                                $(this).toggleClass('cl-checked');
+                            });
+                            $(panel).find('.checklabeldelete:last').click(function () {
+                                $(this).parent('.checklabel:first').parent('div').remove();
+                            });
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+                            console.log('Error in Operation');
+                        }
                     });
-                    $('.checklabeldelete:last').click(function () {
-                        $(this).parent('.checklabel:first').parent('div').remove();
-                    });
+
+                    // $.ajax({
+                    //     url: url,
+                    //     method: 'POST',
+                    //     data: data,
+                    //     dataType: 'json',
+                    //     contentType: "application/json;charset=UTF-8",
+                    //     // xhrFields: {
+                    //     //     withCredentials: true //配置http跨域请求中携带cookie
+                    //     // },
+                    //     success: function (data) {
+                    //         debugger
+
+                    //     }
+                    // });
+
+
+                }
+                else if (!newLabelString) {
+                    noticeModal(2, className + '名称为空！');
                 }
                 else {
-                    warning('标签"' + newLabelString + '"已经存在！')
+                    var content = '<' + newLabelString + '>已经存在！';
+                    noticeModal(2, content);
                 }
             });
 
@@ -413,7 +423,7 @@
                     ['color', ['color']],
                     ['para', ['ul', 'ol', 'paragraph']],
                     ['height', ['height']],
-                    ['codeview',['codeview']],
+                    ['codeview', ['codeview']],
                     ['picture', ['picture']]
                 ], popover: {
                     image: [
@@ -435,40 +445,41 @@
                 onpaste: function () {
                     alert('You have pasted something to the editor');
                 },
-                callbacks:{
-                onImageUpload: function (files) {
-                    //上传图片到服务器
-                    var formData = new FormData();
-                    formData.append('userId','9665B66D-D859-4FD7-A09B-8E1D6ACCF98A');
-                    formData.append('file',files[0]);
-                    var url=Url.Base+'/UploadPicture/UploadProfilePicture';
-                    $.ajax({
-                        url : url,//后台文件上传接口
-                        type : 'POST',
-                        data : formData,
-                        processData : false,
-                        contentType : false,
-                        success : function(path) {
-                            $('.summernote').summernote('insertImage',path);
-                        },error:function(){
-                            alert("上传失败");
-                        }
-                    });
-                }}
-            });
+                // 上传图片的接口
+                callbacks: {      //本文的主题来了，调用官方提供的callbacks接口，用来自定义
+                    onImageUpload: function (files) {      //onImageUpload代表图片上传事件，默认将图片变为base64的那个事件
+                        var data = new FormData();        //html5提供的formdata对象，将图片加载为数据的容器
+                        data.append('file', files[0]);  //加载选中的第一张图片，并给这图片数据标记一个'image_up'的名称
+                        var url = Url.Base + 'Blog/UploadPicture';
+                        //调用上传图片
+                        $.ajax({
+                            url: url,     //上传图片请求的路径
+                            method: 'POST',            //方法
+                            data: data,                 //数据
+                            processData: false,        //告诉jQuery不要加工数据
+                            contentType: false,        //<code class="javascript comments"> 告诉jQuery,在request head里不要设置Content-Type
+                            dataType: 'json',
+                            xhrFields: {
+                                withCredentials: true //配置http跨域请求中携带cookie
+                            },
+                            success: function (data) {  //图片上传成功之后，对返回来的数据要做的事情
+                                debugger
+                                $('.summernote').summernote('insertImage', data.data);
+                                // if (data['message'] == 'success') {
+                                //     $("#tt").summernote('insertImage', data['data']);       //调用内部api——insertImage以路径的形式插入图片到文本编辑区
+                                // }
+                                // else {
+                                //     alert(data['message']);
+                                // }
+                            }
+                        });
+                    }
+                }
+            }
+            );
 
-
-            // markdown editor
-            var initContent = '<h4>Hello there</h4> ' +
-                '<p>How are you? I have below task for you :</p> ' +
-                '<p>Select from this text... Click the bold on THIS WORD and make THESE ONE italic, ' +
-                'link GOOGLE to google.com, ' +
-                'test to insert image (and try to tab after write the image description)</p>' +
-                '<p>Test Preview And ending here...</p> ' +
-                '<p>Click "List"</p> Enjoy!';
-
-            $('#markdown-editor').text(toMarkdown(initContent));
-        });
+        }
+        );
 
     </script>
 </body>

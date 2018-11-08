@@ -23,7 +23,7 @@ namespace MiBlog.API.Controller
     /// 博客管理
     /// </summary>
     [Route("[controller]")]
-    //[EnableCors("AllowCors")]
+    [EnableCors("any")]
     public class UserController : BasicController
     {
         private IUsreInfoService _service;

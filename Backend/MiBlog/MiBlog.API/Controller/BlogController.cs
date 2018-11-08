@@ -24,7 +24,7 @@ namespace MiBlog.API
     /// 博客管理
     /// </summary>
     [Route("[controller]")]
-    //[EnableCors("AllowCors")]
+    [EnableCors("any")]
     public class BlogController: BasicController
     {
         private IBlogService _service;
@@ -205,7 +205,7 @@ namespace MiBlog.API
                 SetResultWhenError<string>(result, e);
             }
 
-            return new JsonResult(new { result.Data });
+            return new JsonResult(new { data=result.Data });
         }
 
         /// <summary>

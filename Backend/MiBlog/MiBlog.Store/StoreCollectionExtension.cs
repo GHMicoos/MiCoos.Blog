@@ -20,6 +20,8 @@ namespace MiBlog.Store
 
             services.AddTransient<IBlogStore, BlogStore>();
             services.AddTransient<IUserInfoStore, UserInfoStore>();
+            services.AddTransient<ILabelStore, LabelStore>();
+            services.AddTransient<ICategoryStore, CategoryStore>();
 
             return services;
         }
