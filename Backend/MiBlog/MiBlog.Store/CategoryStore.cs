@@ -34,6 +34,30 @@ namespace MiBlog.Store
         }
 
         /// <summary>
+        /// 删除分类
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool DeleteCategory(TCategory data)
+        {
+            _dbContext.TCategory.Remove(data);
+            _dbContext.Save();
+            return true;
+        }
+
+        /// <summary>
+        /// 更新分类
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool UpdateCategory(TCategory data)
+        {
+            _dbContext.TCategory.Update(data);
+            _dbContext.Save();
+            return true;
+        }
+
+        /// <summary>
         /// 查询分类
         /// </summary>
         /// <returns></returns>

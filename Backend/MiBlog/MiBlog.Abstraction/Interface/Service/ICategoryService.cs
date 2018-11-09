@@ -13,8 +13,22 @@ namespace MiBlog.Abstraction.Interface.Service
         /// <summary>
         /// 新增标签
         /// </summary>
-        /// <param name="param">文章id</param>
+        /// <param name="param"></param>
         /// <returns></returns>
         bool AddCategory(ReqAddCategory param);
+
+
+        /// <summary>
+        /// 删除分类 当分类没有文章关联
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        bool DeleteCategoryIfNoArticle(ReqAddCategory param);
+
+        /// <summary>
+        /// 查询标签名称列表
+        /// </summary>
+        /// <returns></returns>
+        List<string> QueryCategory();
     }
 }

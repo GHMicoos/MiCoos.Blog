@@ -52,5 +52,56 @@ namespace MiBlog.API.Controller
 
             return new JsonResult(result);
         }
+
+        /// <summary>
+        /// 删除标签，如果该标签无文章关联
+        /// </summary>
+        /// <param name="param">文章id</param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("DeleteLabelIfNoArticle")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<bool>))]
+        public IActionResult DeleteLabelIfNoArticle([FromBody]ReqAddLabel param)
+        {
+            var result = new ResponseBase<bool>();
+            try
+            {
+                var data = _service.DeleteLabelIfNoArticle(param);//调用逻辑层
+                if (data) SetResultWhenSuccess<bool>(result, data);
+                else SetResultWhenFail<bool>(result, data);
+            }
+            catch (Exception e)
+            {
+                SetResultWhenError<bool>(result, e);
+            }
+
+            return new JsonResult(result);
+        }
+
+        /// <summary>
+        /// 查询标签名称列表
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("QueryLabel")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ResponseBase<List<string>>))]
+        public IActionResult QueryLabel()
+        {
+            var result = new ResponseBase<List<string>>();
+            try
+            {
+                var data = _service.QueryLabel();//调用逻辑层
+                if (data.Count>0) SetResultWhenSuccess<List<string>>(result, data);
+                else SetResultWhenFail<List<string>>(result, data);
+            }
+            catch (Exception e)
+            {
+                SetResultWhenError<List<string>>(result, e);
+            }
+
+            return new JsonResult(result);
+        }
+
+
     }
 }

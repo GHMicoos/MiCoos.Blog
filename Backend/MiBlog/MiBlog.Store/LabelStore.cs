@@ -34,6 +34,30 @@ namespace MiBlog.Store
         }
 
         /// <summary>
+        /// 添加标签
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool DeleteLabel(TLabel data)
+        {
+            _dbContext.TLabel.Remove(data);
+            _dbContext.Save();
+            return true;
+        }
+
+        /// <summary>
+        /// 添加标签
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool UpdateLabel(TLabel data)
+        {
+            _dbContext.TLabel.Update(data);
+            _dbContext.Save();
+            return true;
+        }
+
+        /// <summary>
         /// 查询标签
         /// </summary>
         /// <returns></returns>

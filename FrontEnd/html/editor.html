@@ -330,9 +330,89 @@
             $('.checklabel').click(function () {
                 $(this).toggleClass('cl-checked');
             });
-            $('.checklabeldelete').click(function () {
-                $(this).parent('.checklabel:first').parent('div').remove();
-            });
+
+            function checklabeldelete() {
+                var name = $(this).parent('.checklabel:first').text();
+                var removeDIv = $(this).parent('.checklabel:first').parent('div');
+                if (!name) removeDIv.remove();
+
+                var classType = $(this).parents('#labelDiv').length > 0 ? 1 : 2;//1标签，2分类
+                var url = '';
+                if (classType == 1) url = Url.Base + 'Label/DeleteLabelIfNoArticle';
+                else if (classType == 2) url = Url.Base + 'Category/DeleteCategoryIfNoArticle';
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: JSON.stringify({ "name": name }),
+                    contentType: "application/json;charset-UTF-8",
+                    success: function (data, textStatus, xhr) {
+                        if (!data.data) noticeModal(3, data.message);
+                        removeDIv.remove();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        noticeModal(3, 'ajax请求错误。');
+                    }
+                });
+            }
+
+            function emptyLabelPanel(type) {
+                //1 标签，2 分类
+                if (type === 0) {
+                    emptyLabelPanel(1);
+                    emptyLabelPanel(2);
+                }
+                else if (type === 1) $('#labelpaenl').find('div').remove();
+                else if (type == 2) $('#categorypaenl').find('div').remove();
+            }
+
+            function initLabelPanel(type) {
+                var url = '';
+                if (type == 1) url = Url.Base + 'Label/QueryLabel';
+                else if (type == 2) url = Url.Base + 'Category/QueryCategory';
+                var panel='';
+                //0标签+分类 1标签 2分类
+                if (type === 0) {
+                    initLabelPanel(1);
+                    initLabelPanel(2);
+                    return;
+                }
+                else if (type === 1) var panel = $('#labelpaenl');
+                else if(type===2) var panel = $('#categorypaenl');
+                if(!panel)return;
+                $.ajax({
+                        url: url,
+                        type: 'POST',
+                        dataType: 'json',
+                        //data: JSON.stringify({ "name": newLabelString }),
+                        contentType: "application/json;charset-UTF-8",
+                        success: function (data, textStatus, xhr) {
+                            if (!data.status != 1) noticeModal(3, data.message);
+                            for (var i = 0, ilen = data.data.length; i < ilen; i++) {
+                                var html = [];
+                                var labelName=data.data[i];
+                                html.push('<div style="display:inline-block"><span class="label label-default checklabel">');
+                                html.push(labelName);
+                                html.push('<span class="glyphicon glyphicon-remove checklabeldelete"></span></span></div>');
+                                panel.append(html.join('').toString());
+                                $(panel).parents('.panel-body').find('.checklabel:last').click(function () {
+                                    $(this).toggleClass('cl-checked');
+                                });
+                                $(panel).find('.checklabeldelete:last').click(checklabeldelete);
+
+                            }
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+                            console.log('Error in Operation');
+                        }
+                    });
+
+            }
+
+            emptyLabelPanel(0);
+            initLabelPanel(0);
+
+            $('.checklabeldelete').click(checklabeldelete);
 
 
             $('#labelDiv .addlabelbtn,#catagoryDiv .addlabelbtn').click(function () {
@@ -356,7 +436,7 @@
                     var url = '';
                     if (classType == 1) url = Url.Base + 'Label/AddLabel';
                     else if (classType == 2) url = Url.Base + 'Category/AddCategory';
-                    
+
                     //var data = { name: newLabelString };
                     $.ajax({
                         url: url,
@@ -365,6 +445,7 @@
                         data: JSON.stringify({ "name": newLabelString }),
                         contentType: "application/json;charset-UTF-8",
                         success: function (data, textStatus, xhr) {
+                            if (!data.data) noticeModal(3, data.message);
                             var html = [];
                             html.push('<div style="display:inline-block"><span class="label label-default checklabel">');
                             html.push(newLabelString);
@@ -373,31 +454,12 @@
                             $(panel).parents('.panel-body').find('.checklabel:last').click(function () {
                                 $(this).toggleClass('cl-checked');
                             });
-                            $(panel).find('.checklabeldelete:last').click(function () {
-                                $(this).parent('.checklabel:first').parent('div').remove();
-                            });
+                            $(panel).find('.checklabeldelete:last').click(checklabeldelete);
                         },
                         error: function (xhr, textStatus, errorThrown) {
                             console.log('Error in Operation');
                         }
                     });
-
-                    // $.ajax({
-                    //     url: url,
-                    //     method: 'POST',
-                    //     data: data,
-                    //     dataType: 'json',
-                    //     contentType: "application/json;charset=UTF-8",
-                    //     // xhrFields: {
-                    //     //     withCredentials: true //配置http跨域请求中携带cookie
-                    //     // },
-                    //     success: function (data) {
-                    //         debugger
-
-                    //     }
-                    // });
-
-
                 }
                 else if (!newLabelString) {
                     noticeModal(2, className + '名称为空！');

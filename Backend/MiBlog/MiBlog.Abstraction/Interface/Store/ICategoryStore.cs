@@ -16,6 +16,20 @@ namespace MiBlog.Abstraction.Interface.Store
         bool AddCategory(TCategory data);
 
         /// <summary>
+        /// 删除分类
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        bool DeleteCategory(TCategory data);
+
+        /// <summary>
+        /// 更新分类
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        bool UpdateCategory(TCategory data);
+
+        /// <summary>
         /// 查询分类
         /// </summary>
         /// <returns></returns>
